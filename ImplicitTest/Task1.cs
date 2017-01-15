@@ -11,13 +11,12 @@ using System.Windows.Forms;
 using EyeXFramework;
 using Tobii.EyeX.Framework;
 
+using ImplicitTest.Model;
+
 namespace ImplicitTest
 {
     public partial class Task1 : Form
     {
-        private int SCREEN_WIDTH = SystemInformation.PrimaryMonitorSize.Width;
-        private int SCREEN_HEIGHT = SystemInformation.PrimaryMonitorSize.Height;
-
         private GazePointDataStream lightlyFilteredGazeDataStream =
             Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
 
