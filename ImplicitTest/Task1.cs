@@ -28,6 +28,10 @@ namespace ImplicitTest
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
+            Word test = new Word("tttt");
+            test.SetBounds((int)Setting.cWord[0].X, (int)Setting.cWord[0].Y, (int)Setting.sWord.Y, (int)Setting.sWord.X);
+            this.Controls.Add(test);
+
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
         }
 
