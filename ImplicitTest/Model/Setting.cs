@@ -13,9 +13,13 @@ namespace ImplicitTest.Model
         public static int SCREEN_HEIGHT;
 
         public static PointF margin;
+        public static PointF sStimulus;
         public static PointF cStimulus;
+        public static PointF aWord;
+        public static PointF sWord;
         public static PointF[] cWord = new PointF[15];
-        public static SizeF interval;
+        public static SizeF wInterval;
+        public static SizeF yInterval;
         public static SizeF buffer;
     }
 }
