@@ -113,6 +113,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "사용자 설정";
             this.ResumeLayout(false);
             this.PerformLayout();
