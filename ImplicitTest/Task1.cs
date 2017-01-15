@@ -13,7 +13,7 @@ using Tobii.EyeX.Framework;
 
 namespace ImplicitTest
 {
-    public partial class Task0 : Form
+    public partial class Task1 : Form
     {
         private int SCREEN_WIDTH = SystemInformation.PrimaryMonitorSize.Width;
         private int SCREEN_HEIGHT = SystemInformation.PrimaryMonitorSize.Height;
@@ -21,7 +21,7 @@ namespace ImplicitTest
         private GazePointDataStream lightlyFilteredGazeDataStream =
             Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
 
-        public Task0()
+        public Task1()
         {
             InitializeComponent();
 

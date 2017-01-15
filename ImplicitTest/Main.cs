@@ -12,7 +12,7 @@ namespace ImplicitTest
 {
     public partial class Main : Form
     {
-        private Task0 task0;
+        private Task1 task1;
 
         public Main()
         {
@@ -21,8 +21,8 @@ namespace ImplicitTest
 
         private void startBtn_Click(object sender, EventArgs e)
         {
-            task0 = new Task0();
-            task0.Show();
+            task1 = new Task1();
+            task1.Show();
         }
     }
 }
