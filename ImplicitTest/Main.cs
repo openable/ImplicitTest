@@ -33,6 +33,48 @@ namespace ImplicitTest
             Setting.cStimulus = new PointF((float)((Setting.SCREEN_WIDTH - Setting.sStimulus.X) / 2.0),
                 (float)(Setting.margin.Y));
 
+            Setting.aWord = new PointF((float)((Setting.SCREEN_WIDTH / 5.0) * 3),
+                (float)(Setting.SCREEN_HEIGHT - Setting.margin.Y * 2));
+            Setting.xInterval = (float)((Setting.aWord.X / 5.0) / 10.0);
+            Setting.yInterval = (float)((Setting.aWord.Y / 3.0) / 10.0);
+            Setting.xBuffer = (float)(((Setting.aWord.X / 5.0) - Setting.xInterval) / 8.0);
+            Setting.yBuffer = (float)(((Setting.aWord.Y / 3.0) - Setting.yInterval) / 8.0);
+
+            Setting.sWord = new PointF((float)((Setting.aWord.X / 5.0) - (Setting.xInterval * 2) - (Setting.xBuffer * 2)),
+                (float)((Setting.aWord.Y / 3.0) - (Setting.yInterval * 2) - (Setting.yBuffer * 2)));
+
+            Setting.cWord[0] = new PointF((float)(Setting.margin.X + Setting.xInterval + Setting.xBuffer),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + Setting.yInterval + Setting.yBuffer);
+            Setting.cWord[1] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 3 + Setting.sWord.X),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + Setting.yInterval + Setting.yBuffer);
+            Setting.cWord[2] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 5 + Setting.sWord.X * 2),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + Setting.yInterval + Setting.yBuffer);
+            Setting.cWord[3] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 7 + Setting.sWord.X * 3),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + Setting.yInterval + Setting.yBuffer);
+            Setting.cWord[4] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 9 + Setting.sWord.X * 4),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + Setting.yInterval + Setting.yBuffer);
+
+            Setting.cWord[5] = new PointF((float)(Setting.margin.X + Setting.xInterval + Setting.xBuffer),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 3 + Setting.sWord.Y);
+            Setting.cWord[6] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 3 + Setting.sWord.X),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 3 + Setting.sWord.Y);
+            Setting.cWord[7] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 5 + Setting.sWord.X * 2),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 3 + Setting.sWord.Y);
+            Setting.cWord[8] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 7 + Setting.sWord.X * 3),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 3 + Setting.sWord.Y);
+            Setting.cWord[9] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 9 + Setting.sWord.X * 4),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 3 + Setting.sWord.Y);
+
+            Setting.cWord[10] = new PointF((float)(Setting.margin.X + Setting.xInterval + Setting.xBuffer),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 5 + Setting.sWord.Y * 2);
+            Setting.cWord[11] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 3 + Setting.sWord.X),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 5 + Setting.sWord.Y * 2);
+            Setting.cWord[12] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 5 + Setting.sWord.X * 2),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 5 + Setting.sWord.Y * 2);
+            Setting.cWord[13] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 7 + Setting.sWord.X * 3),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 5 + Setting.sWord.Y * 2);
+            Setting.cWord[14] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 9 + Setting.sWord.X * 4),
+                (float)(Setting.margin.Y + ((Setting.SCREEN_WIDTH / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 5 + Setting.sWord.Y * 2);
         }
 
         private void startBtn_Click(object sender, EventArgs e)

@@ -16,10 +16,12 @@ namespace ImplicitTest.Model
         public static PointF sStimulus;
         public static PointF cStimulus;
         public static PointF aWord;
+        public static float xInterval;
+        public static float yInterval;
+        public static float xBuffer;
+        public static float yBuffer;
         public static PointF sWord;
         public static PointF[] cWord = new PointF[15];
-        public static SizeF wInterval;
-        public static SizeF yInterval;
-        public static SizeF buffer;
+        
     }
 }
