@@ -98,6 +98,7 @@
             this.startBtn.TabIndex = 13;
             this.startBtn.Text = "시작";
             this.startBtn.UseVisualStyleBackColor = true;
+            this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
             // 
             // Main
             // 
