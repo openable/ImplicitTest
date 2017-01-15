@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplicitTest", "ImplicitTest\ImplicitTest.csproj", "{04683A9B-AE92-4F63-9A89-815CC5F5BF59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyeXFramework", "..\..\TobiiEyeXSdk-DotNet-1.7.489\source\EyeXFramework\EyeXFramework.csproj", "{C9BBFBAC-FD0F-46DE-843F-F3620BF79DC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyeXFramework", "TobiiEyeXSdk-DotNet-1.7.489\source\EyeXFramework\EyeXFramework.csproj", "{C9BBFBAC-FD0F-46DE-843F-F3620BF79DC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
