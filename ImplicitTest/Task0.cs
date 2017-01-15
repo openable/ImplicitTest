@@ -34,7 +34,7 @@ namespace ImplicitTest
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
         {
-            Console.WriteLine("{0}\t{1}\t{2}", e.Timestamp, e.X, e.Y);
+//            Console.WriteLine("{0}\t{1}\t{2}", e.Timestamp, e.X, e.Y);
         }
     }
 }
