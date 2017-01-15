@@ -15,12 +15,19 @@ namespace ImplicitTest
 {
     public partial class Task0 : Form
     {
+        private int SCREEN_WIDTH = SystemInformation.PrimaryMonitorSize.Width;
+        private int SCREEN_HEIGHT = SystemInformation.PrimaryMonitorSize.Height;
+
         private GazePointDataStream lightlyFilteredGazeDataStream =
             Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
 
         public Task0()
         {
             InitializeComponent();
+
+            // 전체화면 만들기
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
 
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
         }
