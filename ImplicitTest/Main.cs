@@ -19,9 +19,13 @@ namespace ImplicitTest
         public Main()
         {
             InitializeComponent();
+        }
 
+        private void setCoordinate()
+        {
             Setting.SCREEN_WIDTH = SystemInformation.PrimaryMonitorSize.Width;
             Setting.SCREEN_HEIGHT = SystemInformation.PrimaryMonitorSize.Height;
+
         }
 
         private void startBtn_Click(object sender, EventArgs e)
