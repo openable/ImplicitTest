@@ -21,6 +21,7 @@ namespace ImplicitTest
             Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
         private Word stimulus;
         private Word[] words = new Word[15];
+        private int order = 1;
 
         public Task1()
         {
@@ -30,6 +31,7 @@ namespace ImplicitTest
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
+            taskNum.Text = "문항1-" + order;
             stimulus = new Word("연상단어");
             stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
             this.Controls.Add(stimulus);
