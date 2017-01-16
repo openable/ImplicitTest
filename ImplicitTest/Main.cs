@@ -79,6 +79,7 @@ namespace ImplicitTest
 
         private void startBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             task1 = new Task1();
             task1.Show();
         }

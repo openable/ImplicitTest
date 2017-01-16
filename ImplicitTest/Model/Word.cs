@@ -25,5 +25,15 @@ namespace ImplicitTest.Model
             this.Text = text;
         }
 
+        public bool isGazeHit(double x, double y)
+        {
+            bool isHit = false;
+            if ((this.Location.X - Setting.xBuffer) < x
+                && (this.Location.X + this.Size.Width + Setting.xBuffer) > x
+                && (this.Location.Y - Setting.yBuffer) < y
+                && (this.Location.Y + this.Size.Height + Setting.yBuffer) > y)
+                isHit = true;
+            return isHit;
+        }
     }
 }
