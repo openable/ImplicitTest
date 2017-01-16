@@ -14,7 +14,8 @@ namespace ImplicitTest
 {
     public partial class Main : Form
     {
-        private Task1 task1;
+        public Task1 task1;
+        public Task2 task2;
 
         public Main()
         {
