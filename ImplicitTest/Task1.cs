@@ -38,6 +38,7 @@ namespace ImplicitTest
             {
                 words[i] = new Word("단어 " + (i+1));
                 words[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
+                words[i].Click += new System.EventHandler(this.word_Click);
                 this.Controls.Add(words[i]);
             }
             
@@ -71,6 +72,11 @@ namespace ImplicitTest
             {
                 Console.WriteLine("{0}\t{1}", words[i].Text, words[i].gazeTime);
             }
+        }
+
+        private void word_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
