@@ -97,7 +97,11 @@ namespace ImplicitTest
                 initStimulus();
             }
             else
+            {
+                Setting.main.task2 = new Task2();
+                Setting.main.task2.Show();
                 this.Close();
+            }
         }
     }
 }
