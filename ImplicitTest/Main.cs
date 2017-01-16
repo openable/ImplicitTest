@@ -31,7 +31,7 @@ namespace ImplicitTest
             Setting.sStimulus = new PointF((float)((Setting.SCREEN_WIDTH - Setting.margin.X * 2) / 5.0),
                 (float)((Setting.SCREEN_HEIGHT - Setting.margin.Y * 2) / 10.0));
             Setting.cStimulus = new PointF((float)((Setting.SCREEN_WIDTH - Setting.sStimulus.X) / 2.0),
-                (float)(Setting.margin.Y));
+                (float)(Setting.margin.Y + Setting.sStimulus.Y));
 
             Setting.aWord = new PointF((float)(Setting.SCREEN_WIDTH - Setting.margin.X * 2),
                 (float)((Setting.SCREEN_HEIGHT / 5.0) * 3));
