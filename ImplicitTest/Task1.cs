@@ -66,6 +66,11 @@ namespace ImplicitTest
         private void formClosing(object sender, FormClosingEventArgs e)
         {
             lightlyFilteredGazeDataStream.Next -= gazeDataStreamHandler;
+
+            for (int i = 0; i < 15; i++)
+            {
+                Console.WriteLine("{0}\t{1}", words[i].Text, words[i].gazeTime);
+            }
         }
     }
 }

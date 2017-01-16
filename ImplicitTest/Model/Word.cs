@@ -8,7 +8,7 @@ namespace ImplicitTest.Model
 {
     class Word : System.Windows.Forms.Button
     {
-        private double gazeTime;
+        public double gazeTime;
         private bool sequential = false;
         private double starTime;
 
