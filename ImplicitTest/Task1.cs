@@ -19,6 +19,7 @@ namespace ImplicitTest
     {
         private GazePointDataStream lightlyFilteredGazeDataStream =
             Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
+        private Word[] words = new Word[15];
 
         public Task1()
         {
@@ -28,10 +29,13 @@ namespace ImplicitTest
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
-            Word test = new Word("tttt");
-            test.SetBounds((int)Setting.cWord[0].X, (int)Setting.cWord[0].Y, (int)Setting.sWord.Y, (int)Setting.sWord.X);
-            this.Controls.Add(test);
-
+            for (int i = 0; i < 15; i++)
+            {
+                words[i] = new Word();
+                words[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
+                this.Controls.Add(words[i]);
+            }
+            
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
         }
 
