@@ -54,9 +54,9 @@ namespace ImplicitTest
 
             for (int i = 0; i < 15; i++)
             {
-                if (words[i].isGazeHit((int)e.X, (int)e.Y))
+                if (words[i].isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
                 {
-                    Console.WriteLine("{0}\t{1}\t{2}\t{3}", e.Timestamp, e.X, e.Y, words[i].Text);
+//                    Console.WriteLine("{0}\t{1}\t{2}\t{3}", e.Timestamp, e.X, e.Y, words[i].Text);
                     return;
                 }
             }
