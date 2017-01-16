@@ -22,6 +22,7 @@ namespace ImplicitTest.Model
         public static float yBuffer;
         public static PointF sWord;
         public static PointF[] cWord = new PointF[15];
-        
+
+        public static Main main;
     }
 }

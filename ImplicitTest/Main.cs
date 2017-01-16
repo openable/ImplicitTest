@@ -20,6 +20,7 @@ namespace ImplicitTest
         public Main()
         {
             InitializeComponent();
+            Setting.main = this;
             setCoordinate();
         }
 
