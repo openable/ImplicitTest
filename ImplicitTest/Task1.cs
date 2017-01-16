@@ -51,6 +51,16 @@ namespace ImplicitTest
             Brush br = new SolidBrush(Color.Red);
             gr.FillRectangle(br, (int)e.X, (int)e.Y, 5, 5);
             gr.Dispose();
+
+            for (int i = 0; i < 15; i++)
+            {
+                if (words[i].isGazeHit((int)e.X, (int)e.Y))
+                {
+                    Console.WriteLine("{0}\t{1}\t{2}\t{3}", e.Timestamp, e.X, e.Y, words[i].Text);
+                    return;
+                }
+            }
+
         }
 
         private void formClosing(object sender, FormClosingEventArgs e)
