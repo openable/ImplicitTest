@@ -7,20 +7,20 @@ using System.Collections;
 
 namespace ImplicitTest.Model
 {
-    class Task
+    class Item
     {
         public int type;
         public string stimulus;
         public ArrayList choice;
 
-        public Task()
+        public Item()
         {
             type = 0;
             stimulus = "";
             choice = null;
         }
 
-        public Task(int type, string stimulus)
+        public Item(int type, string stimulus)
         {
             this.type = type;
             this.stimulus = stimulus;
