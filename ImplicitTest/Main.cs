@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using ImplicitTest.Model;
+using System.Collections;
 
 namespace ImplicitTest
 {
@@ -82,7 +83,8 @@ namespace ImplicitTest
 
         private void setTask()
         {
-
+            Setting.taskList = new ArrayList();
+//            Setting.taskList.Add();
         }
 
         private void startBtn_Click(object sender, EventArgs e)
