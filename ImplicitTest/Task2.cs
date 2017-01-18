@@ -20,7 +20,7 @@ namespace ImplicitTest
         private GazePointDataStream lightlyFilteredGazeDataStream =
             Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
         private Word stimulus;
-        private Word[] words = new Word[2];
+        private Word[] choice = new Word[2];
         private int order = 1;
         private int max = 2;
 
@@ -51,15 +51,15 @@ namespace ImplicitTest
             this.Controls.Add(stimulus);
 
             
-            words[0] = new Word("단어 " + order + "-" + 1);
-            words[0].SetBounds((int)(Setting.cWord[5].X+Setting.xInterval*2), (int)Setting.cWord[5].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y*1.5));
-            words[0].Click += new System.EventHandler(this.word_Click);
-            this.Controls.Add(words[0]);
+            choice[0] = new Word("단어 " + order + "-" + 1);
+            choice[0].SetBounds((int)(Setting.cWord[5].X+Setting.xInterval*2), (int)Setting.cWord[5].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y*1.5));
+            choice[0].Click += new System.EventHandler(this.word_Click);
+            this.Controls.Add(choice[0]);
 
-            words[1] = new Word("단어 " + order + "-" + 2);
-            words[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval*2), (int)Setting.cWord[9].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y*1.5));
-            words[1].Click += new System.EventHandler(this.word_Click);
-            this.Controls.Add(words[1]);
+            choice[1] = new Word("단어 " + order + "-" + 2);
+            choice[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval*2), (int)Setting.cWord[9].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y*1.5));
+            choice[1].Click += new System.EventHandler(this.word_Click);
+            this.Controls.Add(choice[1]);
 
         }
 
@@ -73,7 +73,7 @@ namespace ImplicitTest
 
             for (int i = 0; i < 15; i++)
             {
-                if (words[i].isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
+                if (choice[i].isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
                 {
 //                    Console.WriteLine("{0}\t{1}\t{2}\t{3}", e.Timestamp, e.X, e.Y, words[i].Text);
                     return;
@@ -97,8 +97,8 @@ namespace ImplicitTest
 
             for (int i = 0; i < 15; i++)
             {
-                this.Controls.Remove(words[i]);
-                Console.WriteLine("{0}\t{1}", words[i].Text, words[i].gazeTime);
+                this.Controls.Remove(choice[i]);
+                Console.WriteLine("{0}\t{1}", choice[i].Text, choice[i].gazeTime);
             }
 
             if (order < max)
