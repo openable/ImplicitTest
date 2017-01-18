@@ -95,7 +95,7 @@ namespace ImplicitTest
 
             this.Controls.Remove(stimulus);
 
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 2; i++)
             {
                 this.Controls.Remove(choice[i]);
                 Console.WriteLine("{0}\t{1}", choice[i].Text, choice[i].gazeTime);
