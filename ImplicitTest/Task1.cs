@@ -23,6 +23,7 @@ namespace ImplicitTest
         private Word[] words = new Word[15];
         private int order = 1;
         private int max = 4;
+        private int cur = -1;
 
         public Task1()
         {
@@ -39,6 +40,7 @@ namespace ImplicitTest
 
         public Task1(int num)
         {
+            cur = num;
             InitializeComponent();
 
             // 전체화면 만들기
@@ -112,24 +114,33 @@ namespace ImplicitTest
             gr.Clear(Color.White);
             gr.Dispose();
 
-            this.Controls.Remove(stimulus);
-
-            for (int i = 0; i < 15; i++)
+            if (cur == -1)
             {
-                this.Controls.Remove(words[i]);
-                Console.WriteLine("{0}\t{1}", words[i].Text, words[i].gazeTime);
-            }
+                this.Controls.Remove(stimulus);
 
-            if (order < max)
-            {
-                order = order + 1;
-                initStimulus();
+                for (int i = 0; i < 15; i++)
+                {
+                    this.Controls.Remove(words[i]);
+                    Console.WriteLine("{0}\t{1}", words[i].Text, words[i].gazeTime);
+                }
+
+                if (order < max)
+                {
+                    order = order + 1;
+                    initStimulus();
+                }
+                else
+                {
+                    Setting.main.task2 = new Task2();
+                    Setting.main.task2.Show();
+                    this.Close();
+                }
             }
             else
             {
-                Setting.main.task2 = new Task2();
-                Setting.main.task2.Show();
                 this.Close();
+                Setting.main.current++;
+                Setting.main.showTask();
             }
         }
     }
