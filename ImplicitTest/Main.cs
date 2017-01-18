@@ -36,7 +36,7 @@ namespace ImplicitTest
                 (float)(Setting.margin.Y + Setting.sStimulus.Y));
 
             Setting.aWord = new PointF((float)(Setting.SCREEN_WIDTH - Setting.margin.X * 2),
-                (float)((Setting.SCREEN_HEIGHT / 5.0) * 3));
+                (float)((Setting.SCREEN_HEIGHT / 10.0) * 5));
             Setting.xInterval = (float)((Setting.aWord.X / 5.0) / 10.0);
             Setting.yInterval = (float)((Setting.aWord.Y / 3.0) / 10.0);
             Setting.xBuffer = (float)(((Setting.aWord.X / 5.0) - Setting.xInterval) / 8.0);
