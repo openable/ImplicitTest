@@ -22,6 +22,7 @@ namespace ImplicitTest
             InitializeComponent();
             Setting.main = this;
             setCoordinate();
+            setTask();
         }
 
         private void setCoordinate()
@@ -77,6 +78,11 @@ namespace ImplicitTest
                 (float)(Setting.margin.Y + ((Setting.SCREEN_HEIGHT / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 5 + Setting.sWord.Y * 2);
             Setting.cWord[14] = new PointF((float)(Setting.margin.X + (Setting.xInterval + Setting.xBuffer) * 9 + Setting.sWord.X * 4),
                 (float)(Setting.margin.Y + ((Setting.SCREEN_HEIGHT / 5.0) * 2)) + (Setting.yInterval + Setting.yBuffer) * 5 + Setting.sWord.Y * 2);
+        }
+
+        private void setTask()
+        {
+
         }
 
         private void startBtn_Click(object sender, EventArgs e)
