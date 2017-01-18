@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Collections;
 
 namespace ImplicitTest.Model
 {
@@ -24,5 +25,6 @@ namespace ImplicitTest.Model
         public static PointF[] cWord = new PointF[15];
 
         public static Main main;
+        public static ArrayList taskList;
     }
 }
