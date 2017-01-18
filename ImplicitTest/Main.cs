@@ -105,8 +105,15 @@ namespace ImplicitTest
         private void startBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            current = 0;
+            showTask();
+        }
+
+        public void showTask()
+        {
             task1 = new Task1();
             task1.Show();
+            //            if current < 
         }
 
         private void screenBtn_Click(object sender, EventArgs e)
