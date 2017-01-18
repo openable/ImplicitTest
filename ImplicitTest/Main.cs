@@ -17,6 +17,7 @@ namespace ImplicitTest
     {
         public Task1 task1;
         public Task2 task2;
+        public int current;
 
         public Main()
         {
@@ -91,7 +92,14 @@ namespace ImplicitTest
                                         "단어11", "단어12", "단어13", "단어14", "단어15"};
             Setting.taskList.Add(item);
 
-//            Setting.taskList.Add();
+            item = new Item(1, "자극2");
+            item.choice = new string[15]{"단어1", "단어2", "단어3", "단어4", "단어5",
+                                        "단어6", "단어7", "단어8", "단어9", "단어10",
+                                        "단어11", "단어12", "단어13", "단어14", "단어15"};
+            Setting.taskList.Add(item);
+
+
+            //            Setting.taskList.Add();
         }
 
         private void startBtn_Click(object sender, EventArgs e)
