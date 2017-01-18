@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections;
 
 namespace ImplicitTest.Model
 {
@@ -11,7 +10,7 @@ namespace ImplicitTest.Model
     {
         public int type;
         public string stimulus;
-        public ArrayList choice;
+        public string[] choice;
 
         public Item()
         {
