@@ -111,9 +111,18 @@ namespace ImplicitTest
 
         public void showTask()
         {
-            task1 = new Task1();
-            task1.Show();
-            //            if current < 
+            //task1 = new Task1();
+            //task1.Show();
+
+            if (current < Setting.taskList.Count)
+            {
+                Item item = (Item)Setting.taskList[current];
+                if (item.type == 1)
+                {
+                    task1 = new Task1(current);
+                    task1.Show();
+                }
+            }
         }
 
         private void screenBtn_Click(object sender, EventArgs e)
