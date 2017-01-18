@@ -84,10 +84,12 @@ namespace ImplicitTest
         private void setTask()
         {
             Setting.taskList = new ArrayList();
-            Item item;
-            
-            item = new Item(1, "단어1");
-            
+
+            Item item = new Item(1, "자극1");
+            item.choice = new string[15]{"단어1", "단어2", "단어3", "단어4", "단어5",
+                                        "단어6", "단어7", "단어8", "단어9", "단어10",
+                                        "단어11", "단어12", "단어13", "단어14", "단어15"};
+            Setting.taskList.Add(item);
 
 //            Setting.taskList.Add();
         }
