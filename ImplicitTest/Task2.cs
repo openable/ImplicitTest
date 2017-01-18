@@ -20,7 +20,7 @@ namespace ImplicitTest
         private GazePointDataStream lightlyFilteredGazeDataStream =
             Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
         private Word stimulus;
-        private Word[] words = new Word[15];
+        private Word[] words = new Word[2];
         private int order = 1;
         private int max = 2;
 
@@ -50,13 +50,17 @@ namespace ImplicitTest
             stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
             this.Controls.Add(stimulus);
 
-            for (int i = 0; i < 15; i++)
-            {
-                words[i] = new Word("단어 " + order + "-" + (i + 1));
-                words[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
-                words[i].Click += new System.EventHandler(this.word_Click);
-                this.Controls.Add(words[i]);
-            }
+            
+            words[0] = new Word("단어 " + order + "-" + 1);
+            words[0].SetBounds((int)(Setting.cWord[5].X+Setting.xInterval*2), (int)Setting.cWord[5].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y*1.5));
+            words[0].Click += new System.EventHandler(this.word_Click);
+            this.Controls.Add(words[0]);
+
+            words[1] = new Word("단어 " + order + "-" + 2);
+            words[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval*2), (int)Setting.cWord[9].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y*1.5));
+            words[1].Click += new System.EventHandler(this.word_Click);
+            this.Controls.Add(words[1]);
+
         }
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
