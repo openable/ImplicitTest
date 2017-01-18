@@ -85,5 +85,15 @@ namespace ImplicitTest
             task1 = new Task1();
             task1.Show();
         }
+
+        private void screenBtn_Click(object sender, EventArgs e)
+        {
+            Program.EyeXHost.LaunchDisplaySetup();
+        }
+
+        private void caliBtn_Click(object sender, EventArgs e)
+        {
+            Program.EyeXHost.LaunchProfileCreation();
+        }
     }
 }

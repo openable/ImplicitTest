@@ -79,6 +79,7 @@
             this.caliBtn.TabIndex = 15;
             this.caliBtn.Text = "Calibration";
             this.caliBtn.UseVisualStyleBackColor = true;
+            this.caliBtn.Click += new System.EventHandler(this.caliBtn_Click);
             // 
             // screenBtn
             // 
@@ -89,6 +90,7 @@
             this.screenBtn.TabIndex = 14;
             this.screenBtn.Text = "화면 설정";
             this.screenBtn.UseVisualStyleBackColor = true;
+            this.screenBtn.Click += new System.EventHandler(this.screenBtn_Click);
             // 
             // startBtn
             // 
