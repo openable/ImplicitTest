@@ -37,6 +37,19 @@ namespace ImplicitTest
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
         }
 
+        public Task1(int num)
+        {
+            InitializeComponent();
+
+            // 전체화면 만들기
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+            initStimulus((Item)Setting.taskList[num]);
+
+            lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
+        }
+
         private void initStimulus()
         {
             taskNum.Text = "문항1-" + order;
@@ -47,6 +60,22 @@ namespace ImplicitTest
             for (int i = 0; i < 15; i++)
             {
                 words[i] = new Word("단어 " + order + "-" + (i + 1));
+                words[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
+                words[i].Click += new System.EventHandler(this.word_Click);
+                this.Controls.Add(words[i]);
+            }
+        }
+
+        private void initStimulus(Item item)
+        {
+            taskNum.Text = "문항1-";
+            stimulus = new Word(item.stimulus);
+            stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
+            this.Controls.Add(stimulus);
+
+            for (int i = 0; i < 15; i++)
+            {
+                words[i] = new Word(item.choice[i]);
                 words[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
                 words[i].Click += new System.EventHandler(this.word_Click);
                 this.Controls.Add(words[i]);
