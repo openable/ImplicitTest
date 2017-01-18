@@ -12,5 +12,18 @@ namespace ImplicitTest.Model
         public int type;
         public string stimulus;
         public ArrayList choice;
+
+        public Task()
+        {
+            type = 0;
+            stimulus = "";
+            choice = null;
+        }
+
+        public Task(int type, string stimulus)
+        {
+            this.type = type;
+            this.stimulus = stimulus;
+        }
     }
 }

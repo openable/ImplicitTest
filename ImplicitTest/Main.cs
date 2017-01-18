@@ -84,6 +84,8 @@ namespace ImplicitTest
         private void setTask()
         {
             Setting.taskList = new ArrayList();
+            Task item = new Task();
+
 //            Setting.taskList.Add();
         }
 
