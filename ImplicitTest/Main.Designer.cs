@@ -33,9 +33,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.caliBtn = new System.Windows.Forms.Button();
-            this.positionBtn = new System.Windows.Forms.Button();
+            this.screenBtn = new System.Windows.Forms.Button();
             this.startBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.settingBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox4
@@ -80,15 +80,15 @@
             this.caliBtn.Text = "Calibration";
             this.caliBtn.UseVisualStyleBackColor = true;
             // 
-            // positionBtn
+            // screenBtn
             // 
-            this.positionBtn.Location = new System.Drawing.Point(56, 103);
-            this.positionBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.positionBtn.Name = "positionBtn";
-            this.positionBtn.Size = new System.Drawing.Size(109, 27);
-            this.positionBtn.TabIndex = 14;
-            this.positionBtn.Text = "화면 설정";
-            this.positionBtn.UseVisualStyleBackColor = true;
+            this.screenBtn.Location = new System.Drawing.Point(56, 103);
+            this.screenBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.screenBtn.Name = "screenBtn";
+            this.screenBtn.Size = new System.Drawing.Size(109, 27);
+            this.screenBtn.TabIndex = 14;
+            this.screenBtn.Text = "화면 설정";
+            this.screenBtn.UseVisualStyleBackColor = true;
             // 
             // startBtn
             // 
@@ -101,24 +101,24 @@
             this.startBtn.UseVisualStyleBackColor = true;
             this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
             // 
-            // button1
+            // settingBtn
             // 
-            this.button1.Location = new System.Drawing.Point(56, 173);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 27);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "실험 환경 설정";
-            this.button1.UseVisualStyleBackColor = true;
+            this.settingBtn.Location = new System.Drawing.Point(56, 173);
+            this.settingBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.settingBtn.Name = "settingBtn";
+            this.settingBtn.Size = new System.Drawing.Size(109, 27);
+            this.settingBtn.TabIndex = 16;
+            this.settingBtn.Text = "실험 환경 설정";
+            this.settingBtn.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(224, 261);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.settingBtn);
             this.Controls.Add(this.caliBtn);
-            this.Controls.Add(this.positionBtn);
+            this.Controls.Add(this.screenBtn);
             this.Controls.Add(this.startBtn);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox1);
@@ -139,9 +139,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button caliBtn;
-        private System.Windows.Forms.Button positionBtn;
+        private System.Windows.Forms.Button screenBtn;
         private System.Windows.Forms.Button startBtn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button settingBtn;
     }
 }
 
