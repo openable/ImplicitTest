@@ -128,7 +128,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "IAT 2017";
+            this.Text = "WAT";
             this.ResumeLayout(false);
             this.PerformLayout();
 
