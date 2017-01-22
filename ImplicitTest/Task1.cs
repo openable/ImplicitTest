@@ -53,10 +53,13 @@ namespace ImplicitTest
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
         {
-            Graphics gr = this.CreateGraphics();
-            Brush br = new SolidBrush(Color.Red);
-            gr.FillRectangle(br, (int)e.X, (int)e.Y, 5, 5);
-            gr.Dispose();
+            if (Setting.eyeOption)
+            {
+                Graphics gr = this.CreateGraphics();
+                Brush br = new SolidBrush(Color.Red);
+                gr.FillRectangle(br, (int)e.X, (int)e.Y, 5, 5);
+                gr.Dispose();
+            }
 
             for (int i = 0; i < 15; i++)
             {
