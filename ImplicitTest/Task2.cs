@@ -113,7 +113,7 @@ namespace ImplicitTest
             gr.FillRectangle(br, (int)e.X, (int)e.Y, 5, 5);
             gr.Dispose();
 
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 2; i++)
             {
                 if (choice[i].isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
                 {

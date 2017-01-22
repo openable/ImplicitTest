@@ -98,6 +98,10 @@ namespace ImplicitTest
                                         "단어11", "단어12", "단어13", "단어14", "단어15"};
             Setting.taskList.Add(item);
 
+            item = new Item(2, "자극3");
+            item.choice = new string[2]{"단어1", "단어2"};
+            Setting.taskList.Add(item);
+
 
             //            Setting.taskList.Add();
         }
@@ -121,6 +125,11 @@ namespace ImplicitTest
                 {
                     task1 = new Task1(current);
                     task1.Show();
+                }
+                else if (item.type == 2)
+                {
+                    task2 = new Task2(current);
+                    task2.Show();
                 }
             }
         }
