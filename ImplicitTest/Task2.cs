@@ -43,23 +43,14 @@ namespace ImplicitTest
             this.Controls.Add(stimulus);
 
             choice[0] = new Word(item.choice[0]);
-            choice[0].SetBounds((int)(Setting.cWord[5].X + Setting.xInterval * 2), (int)Setting.cWord[5].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
+            choice[0].SetBounds((int)(Setting.cWord[5].X + Setting.xInterval * 4), (int)Setting.cWord[5].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
             choice[0].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[0]);
 
             choice[1] = new Word(item.choice[1]);
-            choice[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval * 2), (int)Setting.cWord[9].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
+            choice[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval * 4), (int)Setting.cWord[9].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
             choice[1].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[1]);
-            /*
-            for (int i = 0; i < 2; i++)
-            {
-                choice[i] = new Word(item.choice[i]);
-                choice[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
-                choice[i].Click += new System.EventHandler(this.word_Click);
-                this.Controls.Add(choice[i]);
-            }
-            */
         }
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
