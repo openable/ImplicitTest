@@ -85,12 +85,12 @@ namespace ImplicitTest
             stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
             this.Controls.Add(stimulus);
 
-            choice[0] = new Word("단어 -" + 1);
+            choice[0] = new Word(item.choice[0]);
             choice[0].SetBounds((int)(Setting.cWord[5].X + Setting.xInterval * 2), (int)Setting.cWord[5].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
             choice[0].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[0]);
 
-            choice[1] = new Word("단어 -" + 2);
+            choice[1] = new Word(item.choice[1]);
             choice[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval * 2), (int)Setting.cWord[9].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
             choice[1].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[1]);
