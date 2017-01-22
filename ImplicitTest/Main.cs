@@ -101,9 +101,6 @@ namespace ImplicitTest
             item = new Item(2, "자극3");
             item.choice = new string[2]{"단어1", "단어2"};
             Setting.taskList.Add(item);
-
-
-            //            Setting.taskList.Add();
         }
 
         private void startBtn_Click(object sender, EventArgs e)
@@ -115,12 +112,10 @@ namespace ImplicitTest
 
         public void showTask()
         {
-            //task1 = new Task1();
-            //task1.Show();
-
             if (current < Setting.taskList.Count)
             {
                 Item item = (Item)Setting.taskList[current];
+
                 if (item.type == 1)
                 {
                     task1 = new Task1(current);
