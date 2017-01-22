@@ -102,7 +102,7 @@
             // 
             // startBtn
             // 
-            this.startBtn.Location = new System.Drawing.Point(56, 320);
+            this.startBtn.Location = new System.Drawing.Point(56, 318);
             this.startBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startBtn.Name = "startBtn";
             this.startBtn.Size = new System.Drawing.Size(109, 27);
