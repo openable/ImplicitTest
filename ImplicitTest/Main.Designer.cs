@@ -130,6 +130,7 @@
             // eyeOption2
             // 
             this.eyeOption2.AutoSize = true;
+            this.eyeOption2.Checked = true;
             this.eyeOption2.Location = new System.Drawing.Point(114, 88);
             this.eyeOption2.Name = "eyeOption2";
             this.eyeOption2.Size = new System.Drawing.Size(59, 16);
@@ -158,6 +159,7 @@
             this.fontNum.Name = "fontNum";
             this.fontNum.Size = new System.Drawing.Size(100, 21);
             this.fontNum.TabIndex = 5;
+            this.fontNum.Text = "10";
             // 
             // startNum
             // 
@@ -166,6 +168,7 @@
             this.startNum.Name = "startNum";
             this.startNum.Size = new System.Drawing.Size(100, 21);
             this.startNum.TabIndex = 4;
+            this.startNum.Text = "1";
             // 
             // eyeLabel
             // 
