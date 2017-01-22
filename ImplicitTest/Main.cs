@@ -106,6 +106,7 @@ namespace ImplicitTest
         private void startBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
+            // 시작하는 위치 설정 변수 current, 값 바꾸면 중간 부터 시작
             current = 0;
             showTask();
         }
