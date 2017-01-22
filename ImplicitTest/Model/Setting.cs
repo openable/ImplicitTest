@@ -10,6 +10,7 @@ namespace ImplicitTest.Model
 {
     class Setting
     {
+        public static bool eyeOption;
         public static int SCREEN_WIDTH;
         public static int SCREEN_HEIGHT;
 

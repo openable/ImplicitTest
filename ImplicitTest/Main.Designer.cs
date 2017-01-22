@@ -139,6 +139,7 @@
             this.eyeOption2.Text = "아니오";
             this.eyeOption2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.eyeOption2.UseVisualStyleBackColor = true;
+            this.eyeOption2.CheckedChanged += new System.EventHandler(this.eyeOption2_CheckedChanged);
             // 
             // eyeOption1
             // 
@@ -147,10 +148,10 @@
             this.eyeOption1.Name = "eyeOption1";
             this.eyeOption1.Size = new System.Drawing.Size(35, 16);
             this.eyeOption1.TabIndex = 6;
-            this.eyeOption1.TabStop = true;
             this.eyeOption1.Text = "예";
             this.eyeOption1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.eyeOption1.UseVisualStyleBackColor = true;
+            this.eyeOption1.CheckedChanged += new System.EventHandler(this.eyeOption1_CheckedChanged);
             // 
             // fontNum
             // 

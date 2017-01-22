@@ -139,5 +139,15 @@ namespace ImplicitTest
         {
             Program.EyeXHost.LaunchProfileCreation();
         }
+
+        private void eyeOption1_CheckedChanged(object sender, EventArgs e)
+        {
+            Setting.eyeOption = true;
+        }
+
+        private void eyeOption2_CheckedChanged(object sender, EventArgs e)
+        {
+            Setting.eyeOption = false;
+        }
     }
 }
