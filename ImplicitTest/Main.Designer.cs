@@ -160,7 +160,7 @@
             this.fontNum.Name = "fontNum";
             this.fontNum.Size = new System.Drawing.Size(100, 21);
             this.fontNum.TabIndex = 5;
-            this.fontNum.Text = "10";
+            this.fontNum.Text = "20";
             // 
             // startNum
             // 

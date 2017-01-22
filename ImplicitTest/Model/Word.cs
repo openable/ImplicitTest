@@ -27,6 +27,7 @@ namespace ImplicitTest.Model
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             UseVisualStyleBackColor = true;
             this.Text = text;
+            this.Font = new System.Drawing.Font("Gulim", Setting.fontSize);
         }
 
         public bool isGazeHit(double time, double x, double y)
