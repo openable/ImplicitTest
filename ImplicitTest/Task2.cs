@@ -23,6 +23,7 @@ namespace ImplicitTest
         private Word[] choice = new Word[2];
         private int order = 1;
         private int max = 2;
+        private int cur = -1;
 
         public Task2()
         {
@@ -33,6 +34,20 @@ namespace ImplicitTest
             this.WindowState = FormWindowState.Maximized;
 
             initStimulus();
+
+            lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
+        }
+
+        public Task2(int num)
+        {
+            cur = num;
+            InitializeComponent();
+
+            // 전체화면 만들기
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+            initStimulus((Item)Setting.taskList[num]);
 
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
         }
@@ -61,6 +76,33 @@ namespace ImplicitTest
             choice[1].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[1]);
 
+        }
+
+        private void initStimulus(Item item)
+        {
+            taskNum.Text = "문항2-";
+            stimulus = new Word(item.stimulus);
+            stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
+            this.Controls.Add(stimulus);
+
+            choice[0] = new Word("단어 -" + 1);
+            choice[0].SetBounds((int)(Setting.cWord[5].X + Setting.xInterval * 2), (int)Setting.cWord[5].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
+            choice[0].Click += new System.EventHandler(this.word_Click);
+            this.Controls.Add(choice[0]);
+
+            choice[1] = new Word("단어 -" + 2);
+            choice[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval * 2), (int)Setting.cWord[9].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
+            choice[1].Click += new System.EventHandler(this.word_Click);
+            this.Controls.Add(choice[1]);
+            /*
+            for (int i = 0; i < 2; i++)
+            {
+                choice[i] = new Word(item.choice[i]);
+                choice[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
+                choice[i].Click += new System.EventHandler(this.word_Click);
+                this.Controls.Add(choice[i]);
+            }
+            */
         }
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
@@ -93,21 +135,34 @@ namespace ImplicitTest
             gr.Clear(Color.White);
             gr.Dispose();
 
-            this.Controls.Remove(stimulus);
-
-            for (int i = 0; i < 2; i++)
+            if (cur == -1)
             {
-                this.Controls.Remove(choice[i]);
-                Console.WriteLine("{0}\t{1}", choice[i].Text, choice[i].gazeTime);
-            }
+                this.Controls.Remove(stimulus);
 
-            if (order < max)
-            {
-                order = order + 1;
-                initStimulus();
+                for (int i = 0; i < 2; i++)
+                {
+                    this.Controls.Remove(choice[i]);
+                    Console.WriteLine("{0}\t{1}", choice[i].Text, choice[i].gazeTime);
+                }
+
+                if (order < max)
+                {
+                    order = order + 1;
+                    initStimulus();
+                }
+                else
+                {
+                    Setting.main.task2 = new Task2();
+                    Setting.main.task2.Show();
+                    this.Close();
+                }
             }
             else
+            {
                 this.Close();
+                Setting.main.current++;
+                Setting.main.showTask();
+            }
         }
     }
 }
