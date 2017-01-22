@@ -28,55 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.phoneBox = new System.Windows.Forms.TextBox();
+            this.nameBox = new System.Windows.Forms.TextBox();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.caliBtn = new System.Windows.Forms.Button();
             this.screenBtn = new System.Windows.Forms.Button();
             this.startBtn = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.groupBox1.SuspendLayout();
+            this.settingGroup = new System.Windows.Forms.GroupBox();
+            this.eyeOption2 = new System.Windows.Forms.RadioButton();
+            this.eyeOption1 = new System.Windows.Forms.RadioButton();
+            this.fontNum = new System.Windows.Forms.TextBox();
+            this.startNum = new System.Windows.Forms.TextBox();
+            this.eyeLabel = new System.Windows.Forms.Label();
+            this.fontLabel = new System.Windows.Forms.Label();
+            this.startLabel = new System.Windows.Forms.Label();
+            this.settingGroup.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox4
+            // phoneBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(75, 47);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(110, 21);
-            this.textBox4.TabIndex = 12;
+            this.phoneBox.Location = new System.Drawing.Point(75, 47);
+            this.phoneBox.Name = "phoneBox";
+            this.phoneBox.Size = new System.Drawing.Size(110, 21);
+            this.phoneBox.TabIndex = 2;
             // 
-            // textBox1
+            // nameBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 21);
-            this.textBox1.TabIndex = 11;
+            this.nameBox.Location = new System.Drawing.Point(75, 17);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(110, 21);
+            this.nameBox.TabIndex = 1;
             // 
-            // label4
+            // phoneLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 12);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "연락처:";
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.Location = new System.Drawing.Point(23, 50);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(45, 12);
+            this.phoneLabel.TabIndex = 10;
+            this.phoneLabel.Text = "연락처:";
             // 
-            // label1
+            // nameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 12);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "이름:";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(36, 20);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(33, 12);
+            this.nameLabel.TabIndex = 9;
+            this.nameLabel.Text = "이름:";
             // 
             // caliBtn
             // 
@@ -84,7 +84,7 @@
             this.caliBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.caliBtn.Name = "caliBtn";
             this.caliBtn.Size = new System.Drawing.Size(109, 27);
-            this.caliBtn.TabIndex = 15;
+            this.caliBtn.TabIndex = 3;
             this.caliBtn.Text = "Calibration";
             this.caliBtn.UseVisualStyleBackColor = true;
             this.caliBtn.Click += new System.EventHandler(this.caliBtn_Click);
@@ -95,7 +95,7 @@
             this.screenBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.screenBtn.Name = "screenBtn";
             this.screenBtn.Size = new System.Drawing.Size(109, 27);
-            this.screenBtn.TabIndex = 14;
+            this.screenBtn.TabIndex = 11;
             this.screenBtn.Text = "화면 설정";
             this.screenBtn.UseVisualStyleBackColor = true;
             this.screenBtn.Click += new System.EventHandler(this.screenBtn_Click);
@@ -106,108 +106,112 @@
             this.startBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startBtn.Name = "startBtn";
             this.startBtn.Size = new System.Drawing.Size(109, 27);
-            this.startBtn.TabIndex = 13;
+            this.startBtn.TabIndex = 8;
             this.startBtn.Text = "시작";
             this.startBtn.UseVisualStyleBackColor = true;
             this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
             // 
-            // groupBox1
+            // settingGroup
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 170);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 130);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "실험 환경 설정";
+            this.settingGroup.Controls.Add(this.eyeOption2);
+            this.settingGroup.Controls.Add(this.eyeOption1);
+            this.settingGroup.Controls.Add(this.fontNum);
+            this.settingGroup.Controls.Add(this.startNum);
+            this.settingGroup.Controls.Add(this.eyeLabel);
+            this.settingGroup.Controls.Add(this.fontLabel);
+            this.settingGroup.Controls.Add(this.startLabel);
+            this.settingGroup.Location = new System.Drawing.Point(12, 170);
+            this.settingGroup.Name = "settingGroup";
+            this.settingGroup.Size = new System.Drawing.Size(200, 130);
+            this.settingGroup.TabIndex = 12;
+            this.settingGroup.TabStop = false;
+            this.settingGroup.Text = "실험 환경 설정";
             // 
-            // label2
+            // eyeOption2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 12);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "시작 위치:";
+            this.eyeOption2.AutoSize = true;
+            this.eyeOption2.Location = new System.Drawing.Point(114, 88);
+            this.eyeOption2.Name = "eyeOption2";
+            this.eyeOption2.Size = new System.Drawing.Size(59, 16);
+            this.eyeOption2.TabIndex = 7;
+            this.eyeOption2.TabStop = true;
+            this.eyeOption2.Text = "아니오";
+            this.eyeOption2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.eyeOption2.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // eyeOption1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 60);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 12);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "글씨 크기:";
+            this.eyeOption1.AutoSize = true;
+            this.eyeOption1.Location = new System.Drawing.Point(73, 88);
+            this.eyeOption1.Name = "eyeOption1";
+            this.eyeOption1.Size = new System.Drawing.Size(35, 16);
+            this.eyeOption1.TabIndex = 6;
+            this.eyeOption1.TabStop = true;
+            this.eyeOption1.Text = "예";
+            this.eyeOption1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.eyeOption1.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // fontNum
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(10, 90);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 12);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "시선 표시:";
+            this.fontNum.Location = new System.Drawing.Point(73, 57);
+            this.fontNum.MaxLength = 4;
+            this.fontNum.Name = "fontNum";
+            this.fontNum.Size = new System.Drawing.Size(100, 21);
+            this.fontNum.TabIndex = 5;
             // 
-            // textBox2
+            // startNum
             // 
-            this.textBox2.Location = new System.Drawing.Point(73, 27);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 3;
+            this.startNum.Location = new System.Drawing.Point(73, 27);
+            this.startNum.MaxLength = 4;
+            this.startNum.Name = "startNum";
+            this.startNum.Size = new System.Drawing.Size(100, 21);
+            this.startNum.TabIndex = 4;
             // 
-            // textBox3
+            // eyeLabel
             // 
-            this.textBox3.Location = new System.Drawing.Point(73, 57);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 21);
-            this.textBox3.TabIndex = 4;
+            this.eyeLabel.AutoSize = true;
+            this.eyeLabel.Location = new System.Drawing.Point(10, 90);
+            this.eyeLabel.Name = "eyeLabel";
+            this.eyeLabel.Size = new System.Drawing.Size(61, 12);
+            this.eyeLabel.TabIndex = 15;
+            this.eyeLabel.Text = "시선 표시:";
             // 
-            // radioButton1
+            // fontLabel
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(73, 88);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(35, 16);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "예";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.fontLabel.AutoSize = true;
+            this.fontLabel.Location = new System.Drawing.Point(10, 60);
+            this.fontLabel.Name = "fontLabel";
+            this.fontLabel.Size = new System.Drawing.Size(61, 12);
+            this.fontLabel.TabIndex = 14;
+            this.fontLabel.Text = "글씨 크기:";
             // 
-            // radioButton2
+            // startLabel
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(114, 88);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(59, 16);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "아니오";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.startLabel.AutoSize = true;
+            this.startLabel.Location = new System.Drawing.Point(10, 30);
+            this.startLabel.Name = "startLabel";
+            this.startLabel.Size = new System.Drawing.Size(61, 12);
+            this.startLabel.TabIndex = 13;
+            this.startLabel.Text = "시작 위치:";
             // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(224, 361);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.settingGroup);
             this.Controls.Add(this.caliBtn);
             this.Controls.Add(this.screenBtn);
             this.Controls.Add(this.startBtn);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.phoneBox);
+            this.Controls.Add(this.nameBox);
+            this.Controls.Add(this.phoneLabel);
+            this.Controls.Add(this.nameLabel);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WAT";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.settingGroup.ResumeLayout(false);
+            this.settingGroup.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,21 +219,21 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox phoneBox;
+        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.Label phoneLabel;
+        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Button caliBtn;
         private System.Windows.Forms.Button screenBtn;
         private System.Windows.Forms.Button startBtn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.GroupBox settingGroup;
+        private System.Windows.Forms.Label eyeLabel;
+        private System.Windows.Forms.Label fontLabel;
+        private System.Windows.Forms.Label startLabel;
+        private System.Windows.Forms.RadioButton eyeOption2;
+        private System.Windows.Forms.RadioButton eyeOption1;
+        private System.Windows.Forms.TextBox fontNum;
+        private System.Windows.Forms.TextBox startNum;
     }
 }
 
