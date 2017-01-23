@@ -159,7 +159,7 @@ namespace ImplicitTest
         private void startBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Console.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text;
+            Console.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text);
             // 시작하는 위치 설정 변수 current, 값 바꾸면 중간 부터 시작
             current = Convert.ToInt16(startNum.Text) - 1;
             Setting.fontSize = Convert.ToInt16(fontNum.Text);
