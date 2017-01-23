@@ -47,17 +47,76 @@ namespace ImplicitTest
 
         private void initStimulus(Item item)
         {
-            stimulus = new Word(item.stimulus);
-            stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
+            if (item.stimulus.Contains("s.png"))
+            {
+                stimulus = new Word();
+                stimulus.Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.stimulus);
+                stimulus.SetBounds((int)(Setting.SCREEN_WIDTH / 2 - 105), (int)Setting.margin.Y, 210, 280);
+            }
+            else if (item.stimulus.Contains(".png"))
+            {
+                stimulus = new Word();
+                stimulus.Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.stimulus);
+                stimulus.SetBounds((int)(Setting.SCREEN_WIDTH / 2 - 150), (int)Setting.margin.Y, 300, 400);
+            }
+            else
+            {
+                stimulus = new Word(item.stimulus);
+                stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
+            }
             this.Controls.Add(stimulus);
 
-            choice[0] = new Word(item.choice[0]);
-            choice[0].SetBounds((int)(Setting.cWord[5].X + Setting.xInterval * 4), (int)Setting.cWord[5].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
+            if (item.choice[0].Contains("s.png"))
+            {
+                choice[0] = new Word();
+                choice[0].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[0]);
+                choice[0].SetBounds((int)(Setting.cWord[0].X + Setting.xInterval * 4),
+                                    (int)Setting.cWord[0].Y,
+                                    210, 280);
+            }
+            else if (item.choice[0].Contains(".png"))
+            {
+                choice[0] = new Word();
+                choice[0].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[0]);
+                choice[0].SetBounds((int)(Setting.cWord[0].X + Setting.xInterval * 4),
+                                    (int)Setting.cWord[0].Y,
+                                    300, 400);
+            }
+            else
+            {
+                choice[0] = new Word(item.choice[0]);
+                choice[0].SetBounds((int)(Setting.cWord[0].X + Setting.xInterval * 4),
+                                    (int)Setting.cWord[0].Y,
+                                    (int)Setting.sWord.X,
+                                    (int)(Setting.sWord.Y * 1.5));
+            }
             choice[0].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[0]);
 
-            choice[1] = new Word(item.choice[1]);
-            choice[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval * 4), (int)Setting.cWord[9].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
+            if (item.choice[1].Contains("s.png"))
+            {
+                choice[1] = new Word();
+                choice[1].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[1]);
+                choice[1].SetBounds((int)(Setting.cWord[4].X - Setting.xInterval * 4),
+                                    (int)Setting.cWord[4].Y,
+                                    210, 280);
+            }
+            else if (item.choice[1].Contains(".png"))
+            {
+                choice[1] = new Word();
+                choice[1].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[1]);
+                choice[1].SetBounds((int)(Setting.cWord[4].X - Setting.xInterval * 4),
+                                    (int)Setting.cWord[4].Y,
+                                    300, 400);
+            }
+            else
+            {
+                choice[1] = new Word(item.choice[1]);
+                choice[1].SetBounds((int)(Setting.cWord[4].X - Setting.xInterval * 4),
+                                    (int)Setting.cWord[4].Y,
+                                    (int)Setting.sWord.X,
+                                    (int)(Setting.sWord.Y * 1.5));
+            }
             choice[1].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[1]);
         }

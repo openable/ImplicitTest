@@ -108,13 +108,13 @@ namespace ImplicitTest
             Setting.taskList.Add(item);
 
             
-            item = new Item(1, "문재인.png");
+            item = new Item(1, "문재인s.png");
             item.choice = new string[15]{"공감", "공정", "다르다", "뭉클하다", "카리스마 부족",
                                         "빨갱이", "개헌", "진정성", "친서민", "패권주의",
                                         "청렴", "준비된", "소통", "대세론", "포퓰리즘"};
             Setting.taskList.Add(item);
 
-            item = new Item(1, "반기문");
+            item = new Item(1, "반기문s.png");
             item.choice = new string[15]{"유리멘탈", "기회주의", "눈치", "무능", "노무현 배신",
                                         "엘리트", "우려 발언", "유력", "최악", "서민 친화 코스프레",
                                         "미검증", "친근", "가식", "무리수", "광폭행보"};
@@ -127,7 +127,7 @@ namespace ImplicitTest
             Setting.taskList.Add(item);
 
             item = new Item(2, "깨끗한");
-            item.choice = new string[2] { "문재인", "반기문" };
+            item.choice = new string[2] { "문재인.png", "반기문.png" };
             Setting.taskList.Add(item);
 
             item = new Item(2, "소통하는");
@@ -135,7 +135,7 @@ namespace ImplicitTest
             Setting.taskList.Add(item);
 
             item = new Item(2, "똑똑한");
-            item.choice = new string[2] { "문재인", "문재인" };
+            item.choice = new string[2] { "문재인", "반기문" };
             Setting.taskList.Add(item);
 
             item = new Item(2, "정치, 행정경험");
