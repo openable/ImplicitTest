@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 using EyeXFramework;
 using Tobii.EyeX.Framework;
@@ -21,6 +22,7 @@ namespace ImplicitTest
             Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
         private Word stimulus;
         private Word[] choice = new Word[2];
+        Stopwatch sw = new Stopwatch();
 
         public Task2(int num)
         {
@@ -51,6 +53,8 @@ namespace ImplicitTest
             choice[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval * 4), (int)Setting.cWord[9].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
             choice[1].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[1]);
+
+            sw.Start();
         }
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
@@ -80,6 +84,9 @@ namespace ImplicitTest
 
         private void word_Click(object sender, EventArgs e)
         {
+            sw.Stop();
+            Console.WriteLine("응답시간: " + sw.ElapsedMilliseconds.ToString() + "ms");
+
             Graphics gr = this.CreateGraphics();
             gr.Clear(Color.White);
             gr.Dispose();
