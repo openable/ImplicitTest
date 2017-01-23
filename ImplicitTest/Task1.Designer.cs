@@ -44,7 +44,7 @@
             // Task1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.taskNum);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

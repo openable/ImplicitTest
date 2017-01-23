@@ -41,14 +41,14 @@
             this.taskNum.TabIndex = 0;
             this.taskNum.Text = "문항";
             // 
-            // Task1
+            // Task2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.taskNum);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Task1";
+            this.Name = "Task2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Task1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formClosing);
