@@ -87,7 +87,7 @@ namespace ImplicitTest
         {
             Setting.taskList = new ArrayList();
 
-            Item item = new Item(1, "토끼");
+            Item item = new Item(1, "토끼.png");
             item.choice = new string[15]{"예쁘다", "귀엽다", "독특하다", "훈훈하다", "싫다",
                                         "다채롭다", "놀랍다", "자극적이다", "새롭다", "매스껍다",
                                         "신선하다", "혐오스럽다", "즐겁다", "단조롭다", "좋다"};

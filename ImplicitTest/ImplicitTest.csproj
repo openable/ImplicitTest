@@ -109,6 +109,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Model\문재인.png" />
+    <Content Include="Model\반기문.png" />
+    <Content Include="Model\뱀.png" />
+    <Content Include="Model\토끼.png" />
+    <Content Include="Model\호랑이.png" />
     <Content Include="Tobii.EyeX.Client.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
