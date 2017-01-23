@@ -47,11 +47,17 @@ namespace ImplicitTest
 
         private void initStimulus(Item item)
         {
-            if (item.stimulus.Contains(".png"))
+            if (item.stimulus.Contains("s.png"))
             {
                 stimulus = new Word();
                 stimulus.Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.stimulus);
-                stimulus.SetBounds((int)(Setting.SCREEN_WIDTH/2-150), (int)Setting.margin.Y, 300, 400);
+                stimulus.SetBounds((int)(Setting.SCREEN_WIDTH/2-105), (int)Setting.margin.Y, 210, 280);
+            }
+            else if (item.stimulus.Contains(".png"))
+            {
+                stimulus = new Word();
+                stimulus.Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.stimulus);
+                stimulus.SetBounds((int)(Setting.SCREEN_WIDTH / 2 - 150), (int)Setting.margin.Y, 300, 400);
             }
             else
             {

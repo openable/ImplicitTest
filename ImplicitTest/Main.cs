@@ -89,19 +89,19 @@ namespace ImplicitTest
             Item item = new Item();
 
             //연습 3개
-            item = new Item(1, "토끼.png");
+            item = new Item(1, "토끼s.png");
             item.choice = new string[15]{"예쁘다", "귀엽다", "독특하다", "훈훈하다", "싫다",
                                         "다채롭다", "놀랍다", "자극적이다", "새롭다", "매스껍다",
                                         "신선하다", "혐오스럽다", "즐겁다", "단조롭다", "좋다"};
             Setting.taskList.Add(item);
 
-            item = new Item(1, "호랑이.png");
+            item = new Item(1, "호랑이s.png");
             item.choice = new string[15]{"예쁘다", "귀엽다", "독특하다", "훈훈하다", "싫다",
                                         "다채롭다", "놀랍다", "자극적이다", "새롭다", "매스껍다",
                                         "신선하다", "혐오스럽다", "즐겁다", "단조롭다", "좋다"};
             Setting.taskList.Add(item);
 
-            item = new Item(1, "뱀.png");
+            item = new Item(1, "뱀s.png");
             item.choice = new string[15]{"예쁘다", "귀엽다", "독특하다", "훈훈하다", "싫다",
                                         "다채롭다", "놀랍다", "자극적이다", "새롭다", "매스껍다",
                                         "신선하다", "혐오스럽다", "즐겁다", "단조롭다", "좋다"};
