@@ -32,14 +32,16 @@ namespace ImplicitTest
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
+            taskNum.Text = "문항 " + (num + 1);
             initStimulus((Item)Setting.taskList[num]);
 
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
+
+            sw.Start();
         }
 
         private void initStimulus(Item item)
         {
-            taskNum.Text = "문항2-";
             stimulus = new Word(item.stimulus);
             stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
             this.Controls.Add(stimulus);
@@ -53,8 +55,6 @@ namespace ImplicitTest
             choice[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval * 4), (int)Setting.cWord[9].Y, (int)Setting.sWord.X, (int)(Setting.sWord.Y * 1.5));
             choice[1].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[1]);
-
-            sw.Start();
         }
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
