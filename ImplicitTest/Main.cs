@@ -86,20 +86,73 @@ namespace ImplicitTest
         {
             Setting.taskList = new ArrayList();
 
-            Item item = new Item(1, "자극1");
-            item.choice = new string[15]{"단어1", "단어2", "단어3", "단어4", "단어5",
-                                        "단어6", "단어7", "단어8", "단어9", "단어10",
-                                        "단어11", "단어12", "단어13", "단어14", "단어15"};
+            Item item = new Item(1, "토끼");
+            item.choice = new string[15]{"예쁘다", "귀엽다", "독특하다", "훈훈하다", "싫다",
+                                        "다채롭다", "놀랍다", "자극적이다", "새롭다", "매스껍다",
+                                        "신선하다", "혐오스럽다", "즐겁다", "단조롭다", "좋다"};
             Setting.taskList.Add(item);
 
-            item = new Item(1, "자극2");
-            item.choice = new string[15]{"단어1", "단어2", "단어3", "단어4", "단어5",
-                                        "단어6", "단어7", "단어8", "단어9", "단어10",
-                                        "단어11", "단어12", "단어13", "단어14", "단어15"};
+            item = new Item(1, "문재인");
+            item.choice = new string[15]{"공감", "공정", "다르다", "뭉클하다", "카리스마 부족",
+                                        "빨갱이", "온건", "진정성", "친서민", "패권주의",
+                                        "청렴", "준비된", "소통", "대세론", "포퓰리즘"};
             Setting.taskList.Add(item);
 
-            item = new Item(2, "자극3");
-            item.choice = new string[2]{"단어1", "단어2"};
+            item = new Item(1, "반기문");
+            item.choice = new string[15]{"유리멘탈", "기회주의", "눈치", "무능", "노무현 배신",
+                                        "엘리트", "우려 발언", "유력", "최악", "서민 친화 코스프레",
+                                        "미검증", "친근", "가식", "무리수", "광폭행보"};
+
+            item = new Item(1, "차기 대통령 덕목");
+            item.choice = new string[15]{"깨끗한", "국민을 생각하는", "소통하는", "똑똑한", "소신있는",
+                                        "일자리 창출 대통령", "정치를 잘하는", "도덕적인", "진보적인", "강력한 리더십",
+                                        "경제 활성화 능력", "정치, 행정경험", "외교/안보/통일 능력", "행정 경험", "판단력"};
+            Setting.taskList.Add(item);
+
+            item = new Item(2, "깨끗한");
+            item.choice = new string[2] { "문재인", "반기문" };
+            Setting.taskList.Add(item);
+
+            item = new Item(2, "소통하는");
+            item.choice = new string[2] { "반기문", "문재인" };
+            Setting.taskList.Add(item);
+
+            item = new Item(2, "똑똑한");
+            item.choice = new string[2] { "문재인", "문재인" };
+            Setting.taskList.Add(item);
+
+            item = new Item(2, "정치, 행정경험");
+            item.choice = new string[2] { "문재인", "반기문" };
+            Setting.taskList.Add(item);
+
+            item = new Item(2, "도덕적인");
+            item.choice = new string[2] { "문재인", "반기문" };
+            Setting.taskList.Add(item);
+
+            item = new Item(1, "차기 정부 중점 정책");
+            item.choice = new string[15]{"일자리 창출", "저출산, 고령화 해소", "양극화 해소", "신성장동력 육성", "기업투자 확대",
+                                        "외교역량 강화", "사드 갈등 해결", "위안부 갈등 해결", "북핵 문제 해결", "부정부패 척결",
+                                        "물가 안정", "정경유착 근절", "주택 수급 불균형 개선", "국정 교과서 폐지", "세월호 진상 조사"};
+            Setting.taskList.Add(item);
+
+            item = new Item(2, "저출산, 고령화 해소");
+            item.choice = new string[2] { "문재인", "반기문" };
+            Setting.taskList.Add(item);
+
+            item = new Item(2, "사드 갈등 해결");
+            item.choice = new string[2] { "반기문", "문재인" };
+            Setting.taskList.Add(item);
+
+            item = new Item(2, "정경유착 근절");
+            item.choice = new string[2] { "문재인", "문재인" };
+            Setting.taskList.Add(item);
+
+            item = new Item(2, "물가 안정");
+            item.choice = new string[2] { "문재인", "반기문" };
+            Setting.taskList.Add(item);
+
+            item = new Item(2, "일자리 창출");
+            item.choice = new string[2] { "문재인", "반기문" };
             Setting.taskList.Add(item);
         }
 
