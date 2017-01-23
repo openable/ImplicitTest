@@ -87,15 +87,28 @@ namespace ImplicitTest
         {
             Setting.taskList = new ArrayList();
 
+            //연습 3개
             Item item = new Item(1, "토끼.png");
             item.choice = new string[15]{"예쁘다", "귀엽다", "독특하다", "훈훈하다", "싫다",
                                         "다채롭다", "놀랍다", "자극적이다", "새롭다", "매스껍다",
                                         "신선하다", "혐오스럽다", "즐겁다", "단조롭다", "좋다"};
             Setting.taskList.Add(item);
 
-            item = new Item(1, "문재인");
+            item = new Item(1, "호랑이.png");
+            item.choice = new string[15]{"예쁘다", "귀엽다", "독특하다", "훈훈하다", "싫다",
+                                        "다채롭다", "놀랍다", "자극적이다", "새롭다", "매스껍다",
+                                        "신선하다", "혐오스럽다", "즐겁다", "단조롭다", "좋다"};
+            Setting.taskList.Add(item);
+
+            item = new Item(1, "뱀.png");
+            item.choice = new string[15]{"예쁘다", "귀엽다", "독특하다", "훈훈하다", "싫다",
+                                        "다채롭다", "놀랍다", "자극적이다", "새롭다", "매스껍다",
+                                        "신선하다", "혐오스럽다", "즐겁다", "단조롭다", "좋다"};
+            Setting.taskList.Add(item);
+
+            item = new Item(1, "문재인.png");
             item.choice = new string[15]{"공감", "공정", "다르다", "뭉클하다", "카리스마 부족",
-                                        "빨갱이", "온건", "진정성", "친서민", "패권주의",
+                                        "빨갱이", "개헌", "진정성", "친서민", "패권주의",
                                         "청렴", "준비된", "소통", "대세론", "포퓰리즘"};
             Setting.taskList.Add(item);
 
