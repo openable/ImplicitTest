@@ -49,26 +49,26 @@ namespace ImplicitTest
         {
             if (item.stimulus.Contains("s.png"))
             {
-                stimulus = new Word();
+                stimulus = new Word(item.stimulus, true);
                 stimulus.Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.stimulus);
                 stimulus.SetBounds((int)(Setting.SCREEN_WIDTH/2-105), (int)Setting.margin.Y, 210, 280);
             }
             else if (item.stimulus.Contains(".png"))
             {
-                stimulus = new Word();
+                stimulus = new Word(item.stimulus, true);
                 stimulus.Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.stimulus);
                 stimulus.SetBounds((int)(Setting.SCREEN_WIDTH / 2 - 150), (int)Setting.margin.Y, 300, 400);
             }
             else
             {
-                stimulus = new Word(item.stimulus);
+                stimulus = new Word(item.stimulus, false);
                 stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
             }
             this.Controls.Add(stimulus);
 
             for (int i = 0; i < 15; i++)
             {
-                words[i] = new Word(item.choice[i]);
+                words[i] = new Word(item.choice[i], false);
                 words[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
                 words[i].Click += new System.EventHandler(this.word_Click);
                 this.Controls.Add(words[i]);
@@ -114,8 +114,8 @@ namespace ImplicitTest
             Setting.dataFile.WriteLine("응답시간: " + sw.ElapsedMilliseconds.ToString() + "ms");
 
             Word select = (Word)sender;
-            Console.WriteLine("선택단어: " + select.Text);
-            Setting.dataFile.WriteLine("선택단어: " + select.Text);
+            Console.WriteLine("선택단어: " + select.value);
+            Setting.dataFile.WriteLine("선택단어: " + select.value);
 
             Graphics gr = this.CreateGraphics();
             gr.Clear(Color.White);
@@ -123,8 +123,8 @@ namespace ImplicitTest
 
             for (int i = 0; i < 15; i++)
             {
-                Console.WriteLine("{0}\t{1}", words[i].Text, words[i].gazeTime);
-                Setting.dataFile.WriteLine("{0}\t{1}", words[i].Text, words[i].gazeTime);
+                Console.WriteLine("{0}\t{1}", words[i].value, words[i].gazeTime);
+                Setting.dataFile.WriteLine("{0}\t{1}", words[i].value, words[i].gazeTime);
             }
 
             Console.WriteLine("==========================================");

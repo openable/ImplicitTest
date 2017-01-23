@@ -11,6 +11,7 @@ namespace ImplicitTest.Model
         public double gazeTime;
         private bool sequential = false;
         private double starTime;
+        public string value;
 
         public Word()
         {
@@ -20,13 +21,14 @@ namespace ImplicitTest.Model
             UseVisualStyleBackColor = true;
         }
 
-        public Word(string text)
+        public Word(string text, bool img)
         {
             gazeTime = 0.0;
             starTime = 0.0;
             BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             UseVisualStyleBackColor = true;
-            this.Text = text;
+            if (!img) this.Text = text;
+            this.value = text;
             this.Font = new System.Drawing.Font("Gulim", Setting.fontSize);
         }
 
