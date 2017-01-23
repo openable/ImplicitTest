@@ -112,18 +112,23 @@
     <Content Include="Model\문재인.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Model\문재인s.png" />
     <Content Include="Model\반기문.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Model\반기문s.png" />
     <Content Include="Model\뱀.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Model\뱀s.png" />
     <Content Include="Model\토끼.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Model\토끼s.png" />
     <Content Include="Model\호랑이.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Model\호랑이s.png" />
     <Content Include="Tobii.EyeX.Client.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
