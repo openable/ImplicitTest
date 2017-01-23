@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 using ImplicitTest.Model;
 using System.Collections;
@@ -23,6 +24,17 @@ namespace ImplicitTest
         {
             InitializeComponent();
             Setting.main = this;
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (startNum.Equals("1"))
+            {
+                Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-data.txt", true);
+                Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-raw.txt", true);
+            }
+            else
+            {
+                Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-data.txt", true);
+                Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-raw.txt", true);
+            }
             setCoordinate();
             setTask();
         }
@@ -102,6 +114,7 @@ namespace ImplicitTest
             item.choice = new string[15]{"유리멘탈", "기회주의", "눈치", "무능", "노무현 배신",
                                         "엘리트", "우려 발언", "유력", "최악", "서민 친화 코스프레",
                                         "미검증", "친근", "가식", "무리수", "광폭행보"};
+            Setting.taskList.Add(item);
 
             item = new Item(1, "차기 대통령 덕목");
             item.choice = new string[15]{"깨끗한", "국민을 생각하는", "소통하는", "똑똑한", "소신있는",
@@ -160,6 +173,8 @@ namespace ImplicitTest
         {
             this.Hide();
             Console.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text);
+            Setting.dataFile.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text);
+            Setting.rawFile.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text);
             // 시작하는 위치 설정 변수 current, 값 바꾸면 중간 부터 시작
             current = Convert.ToInt16(startNum.Text) - 1;
             Setting.fontSize = Convert.ToInt16(fontNum.Text);
@@ -186,6 +201,10 @@ namespace ImplicitTest
             else
             {
                 Console.WriteLine("[실험 종료]");
+                Setting.dataFile.WriteLine("[실험 종료]");
+                Setting.rawFile.WriteLine("[실험 종료]");
+                Setting.dataFile.Close();
+                Setting.rawFile.Close();
                 this.Close();
                 // Application.ExitThread();
                 // Process.GetCurrentProcess().Kill();

@@ -5,11 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Collections;
+using System.IO;
 
 namespace ImplicitTest.Model
 {
     class Setting
     {
+        public static StreamWriter dataFile;
+        public static StreamWriter rawFile;
+
+        public static string ID;
         public static bool eyeOption;
         public static int fontSize;
         public static int SCREEN_WIDTH;

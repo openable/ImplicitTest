@@ -40,6 +40,9 @@ namespace ImplicitTest
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
 
             sw.Start();
+
+            Setting.rawFile.WriteLine("==========================================");
+            Setting.rawFile.WriteLine("문항번호: " + current);
         }
 
         private void initStimulus(Item item)
@@ -61,6 +64,8 @@ namespace ImplicitTest
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
         {
+            Setting.rawFile.WriteLine("{0}\t{1}\t{2}", e.Timestamp, (int)e.X, (int)e.Y);
+
             if (Setting.eyeOption)
             {
                 Graphics gr = this.CreateGraphics();
@@ -82,18 +87,23 @@ namespace ImplicitTest
         private void formClosing(object sender, FormClosingEventArgs e)
         {
             lightlyFilteredGazeDataStream.Next -= gazeDataStreamHandler;
+            Setting.rawFile.WriteLine("==========================================");
         }
 
         private void word_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("==========================================");
+            CConsole.WriteLine("==========================================");
+            Setting.dataFile.WriteLine("==========================================");
             Console.WriteLine("문항번호: " + current);
+            Setting.dataFile.WriteLine("문항번호: " + current);
 
             sw.Stop();
             Console.WriteLine("응답시간: " + sw.ElapsedMilliseconds.ToString() + "ms");
+            Setting.dataFile.WriteLine("응답시간: " + sw.ElapsedMilliseconds.ToString() + "ms");
 
             Word select = (Word)sender;
             Console.WriteLine("선택단어: " + select.Text);
+            Setting.dataFile.WriteLine("선택단어: " + select.Text);
 
             Graphics gr = this.CreateGraphics();
             gr.Clear(Color.White);
@@ -102,9 +112,11 @@ namespace ImplicitTest
             for (int i = 0; i < 2; i++)
             {
                 Console.WriteLine("{0}\t{1}", choice[i].Text, choice[i].gazeTime);
+                Setting.dataFile.WriteLine("{0}\t{1}", choice[i].Text, choice[i].gazeTime);
             }
 
             Console.WriteLine("==========================================");
+            Setting.dataFile.WriteLine("==========================================");
 
             this.Close();
             Setting.main.current++;

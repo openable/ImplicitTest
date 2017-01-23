@@ -72,11 +72,11 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(36, 20);
+            this.nameLabel.Location = new System.Drawing.Point(48, 20);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(33, 12);
+            this.nameLabel.Size = new System.Drawing.Size(20, 12);
             this.nameLabel.TabIndex = 9;
-            this.nameLabel.Text = "이름:";
+            this.nameLabel.Text = "ID:";
             // 
             // caliBtn
             // 
