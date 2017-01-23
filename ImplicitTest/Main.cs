@@ -24,17 +24,6 @@ namespace ImplicitTest
         {
             InitializeComponent();
             Setting.main = this;
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            if (startNum.Equals("1"))
-            {
-                Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-data.txt", true);
-                Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-raw.txt", true);
-            }
-            else
-            {
-                Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-data.txt", true);
-                Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-raw.txt", true);
-            }
             setCoordinate();
             setTask();
         }
@@ -171,6 +160,26 @@ namespace ImplicitTest
 
         private void startBtn_Click(object sender, EventArgs e)
         {
+            if (nameBox.Text.Equals(""))
+            {
+                MessageBox.Show("ID를 입력해 주세요.", "오류", MessageBoxButtons.OK);
+                nameBox.Focus();
+                return;
+            }
+
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            if (startNum.Text.Equals("1"))
+            {
+                Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-data.txt", true);
+                Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-raw.txt", true);
+            }
+            else
+            {
+                Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-data.txt", true);
+                Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-raw.txt", true);
+            }
+
             this.Hide();
             Console.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text);
             Setting.dataFile.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text);

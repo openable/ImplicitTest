@@ -92,7 +92,7 @@ namespace ImplicitTest
 
         private void word_Click(object sender, EventArgs e)
         {
-            CConsole.WriteLine("==========================================");
+            Console.WriteLine("==========================================");
             Setting.dataFile.WriteLine("==========================================");
             Console.WriteLine("문항번호: " + current);
             Setting.dataFile.WriteLine("문항번호: " + current);
