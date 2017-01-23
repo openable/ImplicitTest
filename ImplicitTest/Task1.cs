@@ -20,6 +20,7 @@ namespace ImplicitTest
     {
         private GazePointDataStream lightlyFilteredGazeDataStream =
             Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
+        private int current;
         private Word stimulus;
         private Word[] words = new Word[15];
         Stopwatch sw = new Stopwatch();
@@ -32,7 +33,8 @@ namespace ImplicitTest
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
-            taskNum.Text = "문항 " + (num + 1);
+            current = num + 1;
+            taskNum.Text = "문항 " + (current);
             initStimulus((Item)Setting.taskList[num]);
 
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
@@ -81,8 +83,14 @@ namespace ImplicitTest
 
         private void word_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("==========================================");
+            Console.WriteLine("문항번호: " + current);
+
             sw.Stop();
             Console.WriteLine("응답시간: " + sw.ElapsedMilliseconds.ToString() + "ms");
+
+            Word select = (Word)sender;
+            Console.WriteLine("선택단어: " + select.Text);
 
             Graphics gr = this.CreateGraphics();
             gr.Clear(Color.White);
@@ -92,6 +100,8 @@ namespace ImplicitTest
             {
                 Console.WriteLine("{0}\t{1}", words[i].Text, words[i].gazeTime);
             }
+
+            Console.WriteLine("==========================================");
 
             this.Close();
             Setting.main.current++;
