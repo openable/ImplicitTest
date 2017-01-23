@@ -129,6 +129,13 @@ namespace ImplicitTest
                     task2.Show();
                 }
             }
+            else
+            {
+                Console.WriteLine("[실험 종료]");
+                this.Close();
+                // Application.ExitThread();
+                // Process.GetCurrentProcess().Kill();
+            }
         }
 
         private void screenBtn_Click(object sender, EventArgs e)
