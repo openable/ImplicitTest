@@ -70,7 +70,7 @@ namespace ImplicitTest
             {
                 choice[0] = new Word(item.choice[0], true, false);
                 choice[0].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[0]);
-                choice[0].SetBounds((int)(Setting.cWord[0].X + Setting.xInterval * 4),
+                choice[0].SetBounds((int)(Setting.margin.X + Setting.xInterval * 5),
                                     (int)Setting.cWord[0].Y,
                                     210, 280);
             }
@@ -78,15 +78,15 @@ namespace ImplicitTest
             {
                 choice[0] = new Word(item.choice[0], true, false);
                 choice[0].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[0]);
-                choice[0].SetBounds((int)(Setting.cWord[0].X + Setting.xInterval * 4),
+                choice[0].SetBounds((int)(Setting.margin.X + Setting.xInterval * 5),
                                     (int)Setting.cWord[0].Y,
                                     300, 400);
             }
             else
             {
                 choice[0] = new Word(item.choice[0], false, false);
-                choice[0].SetBounds((int)(Setting.cWord[0].X + Setting.xInterval * 4),
-                                    (int)Setting.cWord[0].Y,
+                choice[0].SetBounds((int)(Setting.cWord[5].X + Setting.xInterval * 4),
+                                    (int)Setting.cWord[5].Y,
                                     (int)Setting.sWord.X,
                                     (int)(Setting.sWord.Y * 1.5));
             }
@@ -97,7 +97,7 @@ namespace ImplicitTest
             {
                 choice[1] = new Word(item.choice[1], true, false);
                 choice[1].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[1]);
-                choice[1].SetBounds((int)(Setting.cWord[4].X - Setting.xInterval * 4),
+                choice[1].SetBounds((int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 210)),
                                     (int)Setting.cWord[4].Y,
                                     210, 280);
             }
@@ -105,15 +105,15 @@ namespace ImplicitTest
             {
                 choice[1] = new Word(item.choice[1], true, false);
                 choice[1].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[1]);
-                choice[1].SetBounds((int)(Setting.cWord[4].X - Setting.xInterval * 4),
+                choice[1].SetBounds((int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 300)),
                                     (int)Setting.cWord[4].Y,
                                     300, 400);
             }
             else
             {
                 choice[1] = new Word(item.choice[1], false, false);
-                choice[1].SetBounds((int)(Setting.cWord[4].X - Setting.xInterval * 4),
-                                    (int)Setting.cWord[4].Y,
+                choice[1].SetBounds((int)(Setting.cWord[9].X - Setting.xInterval * 4),
+                                    (int)Setting.cWord[9].Y,
                                     (int)Setting.sWord.X,
                                     (int)(Setting.sWord.Y * 1.5));
             }
