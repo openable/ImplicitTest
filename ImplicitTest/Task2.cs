@@ -35,10 +35,11 @@ namespace ImplicitTest
 
             current = num + 1;
             taskNum.Text = "문항 " + (current);
-            initStimulus((Item)Setting.taskList[num]);
 
             Setting.rawFile.WriteLine("==========================================");
             Setting.rawFile.WriteLine("문항번호: " + current);
+            Setting.rawFile.Write("선택순서:\t");
+            initStimulus((Item)Setting.taskList[num]);
 
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
 
@@ -92,6 +93,7 @@ namespace ImplicitTest
             }
             choice[0].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[0]);
+            Setting.rawFile.Write(item.choice[0] + "\t");
 
             if (item.choice[1].Contains("s.png"))
             {
@@ -119,6 +121,9 @@ namespace ImplicitTest
             }
             choice[1].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[1]);
+            Setting.rawFile.Write(item.choice[1] + "\t");
+
+            Setting.rawFile.WriteLine();
         }
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
