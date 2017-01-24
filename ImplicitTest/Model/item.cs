@@ -26,12 +26,5 @@ namespace ImplicitTest.Model
             this.type = type;
             this.stimulus = stimulus;
         }
-
-        public Item(int type, string content, string msg)
-        {
-            this.type = type;
-            this.content = content;
-            this.msg = msg;
-        }
     }
 }
