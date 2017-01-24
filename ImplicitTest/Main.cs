@@ -34,10 +34,10 @@ namespace ImplicitTest
             Setting.SCREEN_HEIGHT = SystemInformation.PrimaryMonitorSize.Height;
 
             Setting.margin = new PointF(30, 30);
-            Setting.sStimulus = new PointF((float)((Setting.SCREEN_WIDTH - Setting.margin.X * 2) / 5.0),
-                (float)((Setting.SCREEN_HEIGHT - Setting.margin.Y * 2) / 10.0));
+            Setting.sStimulus = new PointF((float)((Setting.SCREEN_WIDTH - Setting.margin.X * 2) / 4.0),
+                (float)((Setting.SCREEN_HEIGHT - Setting.margin.Y * 2) / 8.0));
             Setting.cStimulus = new PointF((float)((Setting.SCREEN_WIDTH - Setting.sStimulus.X) / 2.0),
-                (float)(Setting.margin.Y + Setting.sStimulus.Y));
+                (float)(Setting.margin.Y + (Setting.sStimulus.Y / 2)));
 
             Setting.aWord = new PointF((float)(Setting.SCREEN_WIDTH - Setting.margin.X * 2),
                 (float)((Setting.SCREEN_HEIGHT / 10.0) * 5));
