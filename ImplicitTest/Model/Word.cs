@@ -30,6 +30,7 @@ namespace ImplicitTest.Model
             if (!img) this.Text = text;
             this.value = text;
             this.FlatAppearance.BorderSize = 1;
+            // 단어 테두리 색깔 수정 부분
             this.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 
