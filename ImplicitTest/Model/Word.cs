@@ -29,7 +29,8 @@ namespace ImplicitTest.Model
             UseVisualStyleBackColor = true;
             if (!img) this.Text = text;
             this.value = text;
-            this.FlatAppearance.BorderSize = 0;
+            this.FlatAppearance.BorderSize = 1;
+            this.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Font = new System.Drawing.Font("Malgun Gothic", Setting.fontSize, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             if (head)
