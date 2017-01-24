@@ -1,6 +1,6 @@
 ﻿namespace ImplicitTest
 {
-    partial class Black
+    partial class Task2
     {
         /// <summary>
         /// Required designer variable.

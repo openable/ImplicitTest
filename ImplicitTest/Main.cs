@@ -17,7 +17,7 @@ namespace ImplicitTest
     public partial class Main : Form
     {
         public Task1 task1;
-        public Black task2;
+        public Task2 task2;
         public int current;
 
         public Main()
@@ -261,7 +261,7 @@ namespace ImplicitTest
                 }
                 else if (item.type == 2)
                 {
-                    task2 = new Black(current);
+                    task2 = new Task2(current);
                     task2.Show();
                 }
             }

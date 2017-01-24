@@ -16,7 +16,7 @@ using ImplicitTest.Model;
 
 namespace ImplicitTest
 {
-    public partial class Black : Form
+    public partial class Task2 : Form
     {
         private GazePointDataStream lightlyFilteredGazeDataStream =
             Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
@@ -25,7 +25,7 @@ namespace ImplicitTest
         private Word[] choice = new Word[2];
         Stopwatch sw = new Stopwatch();
 
-        public Black(int num)
+        public Task2(int num)
         {
             InitializeComponent();
 
