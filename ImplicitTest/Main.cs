@@ -16,6 +16,8 @@ namespace ImplicitTest
 {
     public partial class Main : Form
     {
+        public Back back;
+        public Back guide;
         public Task1 task1;
         public Task2 task2;
         public int current;
@@ -310,6 +312,8 @@ namespace ImplicitTest
 
         public void showTask()
         {
+            back = new Back();
+
             if (current < Setting.taskList.Count)
             {
                 Item item = (Item)Setting.taskList[current];
@@ -324,6 +328,11 @@ namespace ImplicitTest
                     task2 = new Task2(current);
                     task2.Show();
                 }
+                else
+                {
+                    guide = new Back();
+                    guide.Show();
+                }
             }
             else
             {
@@ -332,6 +341,7 @@ namespace ImplicitTest
                 Setting.rawFile.WriteLine("[실험 종료]");
                 Setting.dataFile.Close();
                 Setting.rawFile.Close();
+                back.Close();
                 this.Close();
                 // Application.ExitThread();
                 // Process.GetCurrentProcess().Kill();
