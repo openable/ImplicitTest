@@ -72,7 +72,7 @@ namespace ImplicitTest
 
         private void formClosing(object sender, FormClosingEventArgs e)
         {
-            Setting.rawFile.WriteLine("==========================================");
+            // Setting.rawFile.WriteLine("==========================================");
         }
     }
 }

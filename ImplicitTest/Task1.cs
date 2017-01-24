@@ -102,7 +102,7 @@ namespace ImplicitTest
         private void formClosing(object sender, FormClosingEventArgs e)
         {
             lightlyFilteredGazeDataStream.Next -= gazeDataStreamHandler;
-            Setting.rawFile.WriteLine("==========================================");
+            // Setting.rawFile.WriteLine("==========================================");
         }
 
         private void word_Click(object sender, EventArgs e)
@@ -130,8 +130,8 @@ namespace ImplicitTest
                 Setting.dataFile.WriteLine("{0}\t{1}", words[i].value, words[i].gazeTime);
             }
 
-            Console.WriteLine("==========================================");
-            Setting.dataFile.WriteLine("==========================================");
+            // Console.WriteLine("==========================================");
+            // Setting.dataFile.WriteLine("==========================================");
 
             this.Close();
             Setting.main.current++;
