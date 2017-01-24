@@ -163,7 +163,7 @@ namespace ImplicitTest
 
             //반 연상단어 3번
             item = new Item(1, "반기문s.png");
-            item.choice = new string[15]{"가식", "무리수", "광폭팽보", "연출", "글로벌한 시야",
+            item.choice = new string[15]{"가식", "무리수", "광폭행보", "연출", "글로벌한 시야",
                                         "포용적", "퇴주잔", "세월호 인양\n정부 방침", "박연차 게이트", "특별의전 요구",
                                         "충청", "", "", "", ""};
             Setting.taskList.Add(item);
@@ -307,13 +307,12 @@ namespace ImplicitTest
             // 시작하는 위치 설정 변수 current, 값 바꾸면 중간 부터 시작
             current = Convert.ToInt16(startNum.Text) - 1;
             Setting.fontSize = Convert.ToInt16(fontNum.Text);
+            back = new Back();
             showTask();
         }
 
         public void showTask()
         {
-            back = new Back();
-
             if (current < Setting.taskList.Count)
             {
                 Item item = (Item)Setting.taskList[current];
@@ -330,7 +329,7 @@ namespace ImplicitTest
                 }
                 else
                 {
-                    guide = new Back();
+                    guide = new Back(current);
                     guide.Show();
                 }
             }
