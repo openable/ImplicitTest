@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-
-using EyeXFramework;
-using Tobii.EyeX.Framework;
 
 using ImplicitTest.Model;
 
@@ -18,13 +9,6 @@ namespace ImplicitTest
 {
     public partial class Black : Form
     {
-        private GazePointDataStream lightlyFilteredGazeDataStream =
-            Program.EyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
-        private int current;
-        private Word stimulus;
-        private Word[] choice = new Word[2];
-        Stopwatch sw = new Stopwatch();
-
         public Black(int num)
         {
             InitializeComponent();

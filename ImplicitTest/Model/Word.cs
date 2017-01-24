@@ -32,11 +32,17 @@ namespace ImplicitTest.Model
             this.FlatAppearance.BorderSize = 1;
             this.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Font = new System.Drawing.Font("Malgun Gothic", Setting.fontSize, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+
             if (head)
+            {
                 this.ForeColor = System.Drawing.Color.Yellow;
+                this.Font = new System.Drawing.Font("Malgun Gothic", (Setting.fontSize+5), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            }
             else
+            {
                 this.ForeColor = System.Drawing.Color.White;
+                this.Font = new System.Drawing.Font("Malgun Gothic", Setting.fontSize, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            }
             this.BackColor = System.Drawing.Color.Black;
         }
 
