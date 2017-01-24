@@ -30,6 +30,7 @@
         {
             this.content = new System.Windows.Forms.Label();
             this.msg = new System.Windows.Forms.Label();
+            this.startBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // content
@@ -48,11 +49,21 @@
             this.msg.AutoSize = true;
             this.msg.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.msg.ForeColor = System.Drawing.Color.White;
-            this.msg.Location = new System.Drawing.Point(63, 364);
+            this.msg.Location = new System.Drawing.Point(63, 320);
             this.msg.Name = "msg";
             this.msg.Size = new System.Drawing.Size(52, 28);
             this.msg.TabIndex = 1;
             this.msg.Text = "내용";
+            // 
+            // startBtn
+            // 
+            this.startBtn.Font = new System.Drawing.Font("Malgun Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.startBtn.Location = new System.Drawing.Point(194, 408);
+            this.startBtn.Name = "startBtn";
+            this.startBtn.Size = new System.Drawing.Size(200, 50);
+            this.startBtn.TabIndex = 2;
+            this.startBtn.Text = "시작";
+            this.startBtn.UseVisualStyleBackColor = true;
             // 
             // Back
             // 
@@ -60,6 +71,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(634, 490);
+            this.Controls.Add(this.startBtn);
             this.Controls.Add(this.msg);
             this.Controls.Add(this.content);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -74,5 +86,6 @@
 
         private System.Windows.Forms.Label content;
         private System.Windows.Forms.Label msg;
+        private System.Windows.Forms.Button startBtn;
     }
 }
