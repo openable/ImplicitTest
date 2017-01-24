@@ -33,8 +33,13 @@ namespace ImplicitTest
 
         private void initScreen(Item item)
         {
+            this.content.AutoSize = false;
             this.content.Text = item.content;
-            this.content.Location = new System.Drawing.Point((int)(Setting.margin.X * 3), (int)(Setting.margin.Y*2));
+            this.content.SetBounds((int)(Setting.margin.X * 3),
+                                    (int)(Setting.margin.Y * 5),
+                                    (int)(Setting.SCREEN_WIDTH - (Setting.margin.X * 6)),
+                                    (int)(Setting.SCREEN_HEIGHT / 3.0));
+            this.content.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.msg.Text = item.msg;
             this.msg.Location = new System.Drawing.Point((int)(Setting.margin.X*3), (int)(Setting.SCREEN_HEIGHT / 10 * 8 - 100));
 

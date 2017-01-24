@@ -35,33 +35,31 @@
             // 
             // content
             // 
-            this.content.AutoSize = true;
-            this.content.Font = new System.Drawing.Font("맑은 고딕", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.content.Font = new System.Drawing.Font("Malgun Gothic", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.content.ForeColor = System.Drawing.Color.Yellow;
-            this.content.Location = new System.Drawing.Point(72, 89);
+            this.content.Location = new System.Drawing.Point(63, 71);
             this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(138, 72);
+            this.content.Size = new System.Drawing.Size(111, 59);
             this.content.TabIndex = 0;
             this.content.Text = "내용";
             // 
             // msg
             // 
             this.msg.AutoSize = true;
-            this.msg.Font = new System.Drawing.Font("맑은 고딕", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.msg.Font = new System.Drawing.Font("Malgun Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.msg.ForeColor = System.Drawing.Color.White;
-            this.msg.Location = new System.Drawing.Point(72, 400);
+            this.msg.Location = new System.Drawing.Point(63, 320);
             this.msg.Name = "msg";
-            this.msg.Size = new System.Drawing.Size(111, 59);
+            this.msg.Size = new System.Drawing.Size(90, 47);
             this.msg.TabIndex = 1;
             this.msg.Text = "내용";
             // 
             // startBtn
             // 
-            this.startBtn.Font = new System.Drawing.Font("맑은 고딕", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.startBtn.Location = new System.Drawing.Point(222, 510);
-            this.startBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.startBtn.Font = new System.Drawing.Font("Malgun Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.startBtn.Location = new System.Drawing.Point(194, 408);
             this.startBtn.Name = "startBtn";
-            this.startBtn.Size = new System.Drawing.Size(229, 62);
+            this.startBtn.Size = new System.Drawing.Size(200, 50);
             this.startBtn.TabIndex = 2;
             this.startBtn.Text = "시작";
             this.startBtn.UseVisualStyleBackColor = true;
@@ -69,15 +67,14 @@
             // 
             // Back
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(725, 612);
+            this.ClientSize = new System.Drawing.Size(634, 490);
             this.Controls.Add(this.startBtn);
             this.Controls.Add(this.msg);
             this.Controls.Add(this.content);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Back";
             this.Text = "Back";
             this.ResumeLayout(false);
