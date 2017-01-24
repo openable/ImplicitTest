@@ -37,7 +37,7 @@ namespace ImplicitTest.Model
             if (head)
             {
                 this.ForeColor = System.Drawing.Color.Yellow;
-                this.Font = new System.Drawing.Font("Malgun Gothic", (Setting.fontSize+5), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+                this.Font = new System.Drawing.Font("Malgun Gothic", (Setting.fontSize + 10), System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             }
             else
             {
