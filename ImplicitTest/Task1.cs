@@ -49,26 +49,26 @@ namespace ImplicitTest
         {
             if (item.stimulus.Contains("s.png"))
             {
-                stimulus = new Word(item.stimulus, true);
+                stimulus = new Word(item.stimulus, true, true);
                 stimulus.Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.stimulus);
                 stimulus.SetBounds((int)(Setting.SCREEN_WIDTH/2-105), (int)Setting.margin.Y, 210, 280);
             }
             else if (item.stimulus.Contains(".png"))
             {
-                stimulus = new Word(item.stimulus, true);
+                stimulus = new Word(item.stimulus, true, true);
                 stimulus.Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.stimulus);
                 stimulus.SetBounds((int)(Setting.SCREEN_WIDTH / 2 - 150), (int)Setting.margin.Y, 300, 400);
             }
             else
             {
-                stimulus = new Word(item.stimulus, false);
+                stimulus = new Word(item.stimulus, false, true);
                 stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
             }
             this.Controls.Add(stimulus);
 
             for (int i = 0; i < 15; i++)
             {
-                words[i] = new Word(item.choice[i], false);
+                words[i] = new Word(item.choice[i], false, false);
                 words[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
                 words[i].Click += new System.EventHandler(this.word_Click);
                 this.Controls.Add(words[i]);

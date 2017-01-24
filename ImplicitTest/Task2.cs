@@ -49,26 +49,26 @@ namespace ImplicitTest
         {
             if (item.stimulus.Contains("s.png"))
             {
-                stimulus = new Word(item.stimulus, true);
+                stimulus = new Word(item.stimulus, true, true);
                 stimulus.Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.stimulus);
                 stimulus.SetBounds((int)(Setting.SCREEN_WIDTH / 2 - 105), (int)Setting.margin.Y, 210, 280);
             }
             else if (item.stimulus.Contains(".png"))
             {
-                stimulus = new Word(item.stimulus, true);
+                stimulus = new Word(item.stimulus, true, true);
                 stimulus.Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.stimulus);
                 stimulus.SetBounds((int)(Setting.SCREEN_WIDTH / 2 - 150), (int)Setting.margin.Y, 300, 400);
             }
             else
             {
-                stimulus = new Word(item.stimulus, false);
+                stimulus = new Word(item.stimulus, false, true);
                 stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
             }
             this.Controls.Add(stimulus);
 
             if (item.choice[0].Contains("s.png"))
             {
-                choice[0] = new Word(item.choice[0], true);
+                choice[0] = new Word(item.choice[0], true, false);
                 choice[0].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[0]);
                 choice[0].SetBounds((int)(Setting.cWord[0].X + Setting.xInterval * 4),
                                     (int)Setting.cWord[0].Y,
@@ -76,7 +76,7 @@ namespace ImplicitTest
             }
             else if (item.choice[0].Contains(".png"))
             {
-                choice[0] = new Word(item.choice[0], true);
+                choice[0] = new Word(item.choice[0], true, false);
                 choice[0].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[0]);
                 choice[0].SetBounds((int)(Setting.cWord[0].X + Setting.xInterval * 4),
                                     (int)Setting.cWord[0].Y,
@@ -84,7 +84,7 @@ namespace ImplicitTest
             }
             else
             {
-                choice[0] = new Word(item.choice[0], false);
+                choice[0] = new Word(item.choice[0], false, false);
                 choice[0].SetBounds((int)(Setting.cWord[0].X + Setting.xInterval * 4),
                                     (int)Setting.cWord[0].Y,
                                     (int)Setting.sWord.X,
@@ -95,7 +95,7 @@ namespace ImplicitTest
 
             if (item.choice[1].Contains("s.png"))
             {
-                choice[1] = new Word(item.choice[1], true);
+                choice[1] = new Word(item.choice[1], true, false);
                 choice[1].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[1]);
                 choice[1].SetBounds((int)(Setting.cWord[4].X - Setting.xInterval * 4),
                                     (int)Setting.cWord[4].Y,
@@ -103,7 +103,7 @@ namespace ImplicitTest
             }
             else if (item.choice[1].Contains(".png"))
             {
-                choice[1] = new Word(item.choice[1], true);
+                choice[1] = new Word(item.choice[1], true, false);
                 choice[1].Image = Image.FromFile(Application.StartupPath + "\\model\\" + item.choice[1]);
                 choice[1].SetBounds((int)(Setting.cWord[4].X - Setting.xInterval * 4),
                                     (int)Setting.cWord[4].Y,
@@ -111,7 +111,7 @@ namespace ImplicitTest
             }
             else
             {
-                choice[1] = new Word(item.choice[1], false);
+                choice[1] = new Word(item.choice[1], false, false);
                 choice[1].SetBounds((int)(Setting.cWord[4].X - Setting.xInterval * 4),
                                     (int)Setting.cWord[4].Y,
                                     (int)Setting.sWord.X,

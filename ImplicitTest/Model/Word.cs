@@ -21,7 +21,7 @@ namespace ImplicitTest.Model
             UseVisualStyleBackColor = true;
         }
 
-        public Word(string text, bool img)
+        public Word(string text, bool img, bool head)
         {
             gazeTime = 0.0;
             starTime = 0.0;
@@ -32,7 +32,10 @@ namespace ImplicitTest.Model
             this.FlatAppearance.BorderSize = 0;
             this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Font = new System.Drawing.Font("Malgun Gothic", Setting.fontSize, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.ForeColor = System.Drawing.Color.White;
+            if (head)
+                this.ForeColor = System.Drawing.Color.Yellow;
+            else
+                this.ForeColor = System.Drawing.Color.White;
             this.BackColor = System.Drawing.Color.Black;
         }
 
