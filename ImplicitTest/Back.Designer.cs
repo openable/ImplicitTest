@@ -77,6 +77,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Back";
             this.Text = "Back";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

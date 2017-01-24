@@ -14,6 +14,8 @@ namespace ImplicitTest
 {
     public partial class Back : Form
     {
+        private int current;
+
         public Back()
         {
             InitializeComponent();
@@ -28,7 +30,12 @@ namespace ImplicitTest
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
 
+            current = num + 1;
+
             initScreen((Item)Setting.taskList[num]);
+
+            Setting.rawFile.WriteLine("==========================================");
+            Setting.rawFile.WriteLine("안내화면: " + current);
         }
 
         private void initScreen(Item item)
@@ -51,9 +58,21 @@ namespace ImplicitTest
 
         private void startBtn_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("==========================================");
+            Setting.dataFile.WriteLine("==========================================");
+            Console.WriteLine("안내화면: " + current);
+            Setting.dataFile.WriteLine("안내화면: " + current);
+            Console.WriteLine("==========================================");
+            Setting.dataFile.WriteLine("==========================================");
+
             this.Close();
             Setting.main.current++;
             Setting.main.showTask();
+        }
+
+        private void formClosing(object sender, FormClosingEventArgs e)
+        {
+            Setting.rawFile.WriteLine("==========================================");
         }
     }
 }
