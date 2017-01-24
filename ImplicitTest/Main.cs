@@ -308,6 +308,7 @@ namespace ImplicitTest
             current = Convert.ToInt16(startNum.Text) - 1;
             Setting.fontSize = Convert.ToInt16(fontNum.Text);
             back = new Back();
+            back.Show();
             showTask();
         }
 

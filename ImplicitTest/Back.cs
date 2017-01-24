@@ -34,5 +34,12 @@ namespace ImplicitTest
         private void initScreen(Item item)
         {
         }
+
+        private void startBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Setting.main.current++;
+            Setting.main.showTask();
+        }
     }
 }
