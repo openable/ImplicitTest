@@ -29,7 +29,9 @@ namespace ImplicitTest.Model
             UseVisualStyleBackColor = true;
             if (!img) this.Text = text;
             this.value = text;
-            this.Font = new System.Drawing.Font("Gulim", Setting.fontSize);
+            this.FlatAppearance.BorderSize = 0;
+            this.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Font = new System.Drawing.Font("Malgun Gothic", Setting.fontSize, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.ForeColor = System.Drawing.Color.White;
             this.BackColor = System.Drawing.Color.Black;
         }
