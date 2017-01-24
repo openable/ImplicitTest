@@ -11,6 +11,8 @@ namespace ImplicitTest.Model
         public int type;
         public string stimulus;
         public string[] choice;
+        public string content;
+        public string msg;
 
         public Item()
         {
@@ -23,6 +25,13 @@ namespace ImplicitTest.Model
         {
             this.type = type;
             this.stimulus = stimulus;
+        }
+
+        public Item(int type, string content, string msg)
+        {
+            this.type = type;
+            this.content = content;
+            this.msg = msg;
         }
     }
 }
