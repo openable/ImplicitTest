@@ -33,6 +33,15 @@ namespace ImplicitTest
 
         private void initScreen(Item item)
         {
+            this.content.Text = item.content;
+            this.content.Location = new System.Drawing.Point((int)(Setting.margin.X * 3), (int)(Setting.margin.Y*2));
+            this.msg.Text = item.msg;
+            this.msg.Location = new System.Drawing.Point((int)(Setting.margin.X*3), (int)(Setting.SCREEN_HEIGHT / 10 * 8 - 100));
+
+            if (msg.Text.Equals(""))
+                this.startBtn.Text = "종료";
+
+            this.startBtn.Location = new System.Drawing.Point((int)(Setting.SCREEN_WIDTH/2-100), (int)(Setting.SCREEN_HEIGHT / 10 * 8));
         }
 
         private void startBtn_Click(object sender, EventArgs e)
