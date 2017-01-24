@@ -37,12 +37,12 @@ namespace ImplicitTest
             taskNum.Text = "문항 " + (current);
             initStimulus((Item)Setting.taskList[num]);
 
+            Setting.rawFile.WriteLine("==========================================");
+            Setting.rawFile.WriteLine("문항번호: " + current);
+
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
 
             sw.Start();
-
-            Setting.rawFile.WriteLine("==========================================");
-            Setting.rawFile.WriteLine("문항번호: " + current);
         }
 
         private void initStimulus(Item item)
