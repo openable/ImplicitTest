@@ -30,6 +30,8 @@ namespace ImplicitTest.Model
             if (!img) this.Text = text;
             this.value = text;
             this.Font = new System.Drawing.Font("Gulim", Setting.fontSize);
+            this.ForeColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Black;
         }
 
         public bool isGazeHit(double time, double x, double y)

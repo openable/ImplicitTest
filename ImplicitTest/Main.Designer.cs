@@ -91,6 +91,7 @@
             // 
             // screenBtn
             // 
+            this.screenBtn.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.screenBtn.Location = new System.Drawing.Point(56, 80);
             this.screenBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.screenBtn.Name = "screenBtn";
