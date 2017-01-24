@@ -88,6 +88,11 @@ namespace ImplicitTest
             Setting.taskList = new ArrayList();
             Item item = new Item();
 
+            item = new Item();
+            item.content = "두 번째 실험입니다.\n제시된 사진을 보고 가장 연상되는 단어 한 개를 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
+            Setting.taskList.Add(item);
+
             //연습 1번
             item = new Item(1, "토끼s.png");
             item.choice = new string[15]{"예쁘다", "귀엽다", "독특하다", "훈훈하다", "싫다",
