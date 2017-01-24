@@ -114,6 +114,11 @@ namespace ImplicitTest
                                         "신선하다", "혐오스럽다", "즐겁다", "단조롭다", "좋다"};
             Setting.taskList.Add(item);
 
+            item = new Item();
+            item.content = "문재인 후보와 가장 연관된 단어 한 개를 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
+            Setting.taskList.Add(item);
+
             //문 연상단어 1번
             item = new Item(1, "문재인s.png");
             item.choice = new string[15]{"공감", "공정", "다르다", "뭉클하다", "카리스마 부족",
@@ -133,6 +138,11 @@ namespace ImplicitTest
             item.choice = new string[15]{"포퓰리즘", "사탕발림 공약", "검증된", "일자리 창출", "만 18세 선거권",
                                         "종북", "국가안보 위협", "금괴 루머", "호남", "대담집",
                                         "", "", "", "", ""};
+            Setting.taskList.Add(item);
+
+            item = new Item();
+            item.content = "반기문 후보와 가장 연관된 단어 한 개를 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
             Setting.taskList.Add(item);
 
             //반 연상단어 1번
@@ -156,11 +166,21 @@ namespace ImplicitTest
                                         "충청", "", "", "", ""};
             Setting.taskList.Add(item);
 
+            item = new Item();
+            item.content = "차기 대통령이 갖추어야 할 가장 중요한 덕목 한 개를 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
+            Setting.taskList.Add(item);
+
             // 차기 대통령 덕목
             item = new Item(1, "차기 대통령 덕목");
             item.choice = new string[15]{"깨끗한", "국민을\n생각하는", "소통하는", "소신있는", "도덕적인",
                                         "강력한 리더십", "정치, 행정경험", "판단력", "비전", "진실성",
                                         "책임감", "통찰력", "성실성", "추진력", "언행일치"};
+            Setting.taskList.Add(item);
+
+            item = new Item();
+            item.content = "두 후보 중 어느 후보가 제시된 덕목을 더 갖추었다고 생각하십니까?\n해당 사진을 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
             Setting.taskList.Add(item);
 
             // 덕목의 후보별 연관 비중
@@ -174,11 +194,21 @@ namespace ImplicitTest
                 Setting.taskList.Add(item);
             }
 
+            item = new Item();
+            item.content = "문재인 후보가 어떤 덕목을 갖추면 투표하시겠습니까?\n가장 필요한 덕목 한 개를 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
+            Setting.taskList.Add(item);
+
             // 문에게 필요한 덕목
             item = new Item(1, "문재인s.png");
             item.choice = new string[15]{"깨끗한", "국민을\n생각하는", "소통하는", "소신있는", "도덕적인",
                                         "강력한 리더십", "정치, 행정경험", "판단력", "비전", "진실성",
                                         "책임감", "통찰력", "성실성", "추진력", "언행일치"};
+            Setting.taskList.Add(item);
+
+            item = new Item();
+            item.content = "반기문 후보가 어떤 덕목을 갖추면 투표하시겠습니까?\n가장 필요한 덕목 한 개를 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
             Setting.taskList.Add(item);
 
             // 반에게 필요한 덕목
@@ -188,11 +218,21 @@ namespace ImplicitTest
                                         "책임감", "통찰력", "성실성", "추진력", "언행일치"};
             Setting.taskList.Add(item);
 
+            item = new Item();
+            item.content = "차기 정부가 추진해야 할 가장 중요한 정책 하나를 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
+            Setting.taskList.Add(item);
+
             // 차기 정부 중점 정책
             item = new Item(1, "차기 정부 중점 정책");
             item.choice = new string[15]{"일자리 창출", "저출산,\n고령화 해소", "양극화 해소", "신성장동력\n육성", "기업투자 확대",
                                         "외교역량 강화", "사드 갈등 해결", "위안부 갈등\n해결", "북핵 문제 해결", "부정부패 척결",
                                         "물가 안정", "정경유착 근절", "주택 수급\n불균형 개선", "국정 교과서\n폐지", "세월호\n진상 조사"};
+            Setting.taskList.Add(item);
+
+            item = new Item();
+            item.content = "두 후보 중 어느 후보가 제시된 정책을 더 추진할 것이라고 생각하십니까?\n해당 사진을 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
             Setting.taskList.Add(item);
 
             // 정책 후보별 연관 비중
@@ -206,6 +246,11 @@ namespace ImplicitTest
                 Setting.taskList.Add(item);
             }
 
+            item = new Item();
+            item.content = "문재인 후보가 어떤 정책을 추진하면 투표하시겠습니까?\n가장 필요한 정책 한 개를 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
+            Setting.taskList.Add(item);
+
             // 문에게 필요한 정책
             item = new Item(1, "문재인s.png");
             item.choice = new string[15]{"일자리 창출", "저출산,\n고령화 해소", "양극화 해소", "신성장동력\n육성", "기업투자 확대",
@@ -213,11 +258,21 @@ namespace ImplicitTest
                                         "물가 안정", "정경유착 근절", "주택 수급\n불균형 개선", "국정 교과서\n폐지", "세월호\n진상 조사"};
             Setting.taskList.Add(item);
 
+            item = new Item();
+            item.content = "반기문 후보가 어떤 정책을 추진하면 투표하시겠습니까?\n가장 필요한 정책 한 개를 클릭해 주세요.";
+            item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
+            Setting.taskList.Add(item);
+
             // 반에게 필요한 정책
             item = new Item(1, "반기문s.png");
             item.choice = new string[15]{"일자리 창출", "저출산,\n고령화 해소", "양극화 해소", "신성장동력\n육성", "기업투자 확대",
                                         "외교역량 강화", "사드 갈등 해결", "위안부 갈등\n해결", "북핵 문제 해결", "부정부패 척결",
                                         "물가 안정", "정경유착 근절", "주택 수급\n불균형 개선", "국정 교과서\n폐지", "세월호\n진상 조사"};
+            Setting.taskList.Add(item);
+
+            item = new Item();
+            item.content = "모든 실험이 종료되었습니다.\n감사합니다.";
+            item.msg = "";
             Setting.taskList.Add(item);
         }
 
