@@ -60,8 +60,8 @@ namespace ImplicitTest
         {
             Console.WriteLine("==========================================");
             Setting.dataFile.WriteLine("==========================================");
-            Console.WriteLine("안내화면: " + current);
-            Setting.dataFile.WriteLine("안내화면: " + current);
+            Console.WriteLine("안내화면\t" + current);
+            Setting.dataFile.WriteLine("안내화면\t" + current);
             // Console.WriteLine("==========================================");
             // Setting.dataFile.WriteLine("==========================================");
 

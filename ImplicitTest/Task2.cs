@@ -158,16 +158,16 @@ namespace ImplicitTest
         {
             Console.WriteLine("==========================================");
             Setting.dataFile.WriteLine("==========================================");
-            Console.WriteLine("문항번호: " + current);
-            Setting.dataFile.WriteLine("문항번호: " + current);
+            Console.WriteLine("문항번호\t" + current);
+            Setting.dataFile.WriteLine("문항번호\t" + current);
 
             sw.Stop();
-            Console.WriteLine("응답시간: " + sw.ElapsedMilliseconds.ToString() + "ms");
-            Setting.dataFile.WriteLine("응답시간: " + sw.ElapsedMilliseconds.ToString() + "ms");
+            Console.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "ms");
+            Setting.dataFile.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "ms");
 
             Word select = (Word)sender;
-            Console.WriteLine("선택단어: " + select.value);
-            Setting.dataFile.WriteLine("선택단어: " + select.value);
+            Console.WriteLine("선택단어\t" + select.value);
+            Setting.dataFile.WriteLine("선택단어\t" + select.value);
 
             Graphics gr = this.CreateGraphics();
             gr.Clear(Color.White);
