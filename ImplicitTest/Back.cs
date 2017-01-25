@@ -43,12 +43,18 @@ namespace ImplicitTest
             this.content.AutoSize = false;
             this.content.Text = item.content;
             this.content.SetBounds((int)(Setting.margin.X * 3),
-                                    (int)(Setting.margin.Y * 5),
+                                    (int)(Setting.margin.Y * 10),
                                     (int)(Setting.SCREEN_WIDTH - (Setting.margin.X * 6)),
                                     (int)(Setting.SCREEN_HEIGHT / 3.0));
             this.content.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+
+            this.msg.AutoSize = false;
             this.msg.Text = item.msg;
-            this.msg.Location = new System.Drawing.Point((int)(Setting.margin.X*3), (int)(Setting.SCREEN_HEIGHT / 10 * 8 - 100));
+            this.msg.SetBounds((int)(Setting.margin.X * 3),
+                                    (int)(Setting.SCREEN_HEIGHT / 10 * 8 - 100),
+                                    (int)(Setting.SCREEN_WIDTH - (Setting.margin.X * 6)),
+                                    (int)(Setting.SCREEN_HEIGHT / 3.0));
+            this.msg.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 
             if (msg.Text.Equals(""))
                 this.startBtn.Text = "종료";

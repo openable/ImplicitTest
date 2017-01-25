@@ -59,7 +59,7 @@
             this.startBtn.Font = new System.Drawing.Font("Malgun Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.startBtn.Location = new System.Drawing.Point(194, 408);
             this.startBtn.Name = "startBtn";
-            this.startBtn.Size = new System.Drawing.Size(200, 50);
+            this.startBtn.Size = new System.Drawing.Size(200, 60);
             this.startBtn.TabIndex = 2;
             this.startBtn.Text = "시작";
             this.startBtn.UseVisualStyleBackColor = true;

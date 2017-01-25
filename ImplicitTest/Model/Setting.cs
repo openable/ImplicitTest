@@ -13,6 +13,7 @@ namespace ImplicitTest.Model
     {
         public static StreamWriter dataFile;
         public static StreamWriter rawFile;
+        public static StringBuilder rawEye;
 
         public static string ID;
         public static bool eyeOption;

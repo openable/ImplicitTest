@@ -288,6 +288,7 @@ namespace ImplicitTest
             }
 
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            Setting.ID = nameBox.Text;
 
             if (startNum.Text.Equals("1"))
             {
@@ -299,6 +300,7 @@ namespace ImplicitTest
                 Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-data.txt", true);
                 Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-raw.txt", true);
             }
+            Setting.rawEye = new StringBuilder();
 
             this.Hide();
             Console.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text);
