@@ -80,8 +80,6 @@ namespace ImplicitTest
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
         {
-            Setting.rawFile.WriteLine("{0}\t{1}\t{2}", e.Timestamp, (int)e.X, (int)e.Y);
-
             if (Setting.eyeOption)
             {
                 Graphics gr = this.CreateGraphics();
@@ -94,9 +92,12 @@ namespace ImplicitTest
             {
                 if (words[i].isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
                 {
+                    Setting.rawEye.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}", e.Timestamp, (int)e.X, (int)e.Y, words[i].value));
                     return;
                 }
             }
+
+            Setting.rawEye.AppendLine(string.Format("{0}\t{1}\t{2}", e.Timestamp, (int)e.X, (int)e.Y));
         }
 
         private void formClosing(object sender, FormClosingEventArgs e)
@@ -119,6 +120,9 @@ namespace ImplicitTest
             Word select = (Word)sender;
             Console.WriteLine("선택단어\t" + select.value);
             Setting.dataFile.WriteLine("선택단어\t" + select.value);
+
+            Setting.rawFile.WriteLine(Setting.rawEye);
+            Setting.rawEye.Clear();
 
             Graphics gr = this.CreateGraphics();
             gr.Clear(Color.White);
