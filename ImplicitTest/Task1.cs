@@ -114,8 +114,8 @@ namespace ImplicitTest
             Setting.dataFile.WriteLine("문항번호\t" + current);
 
             sw.Stop();
-            Console.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "ms");
-            Setting.dataFile.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "ms");
+            Console.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "\tms");
+            Setting.dataFile.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "\tms");
 
             Word select = (Word)sender;
             Console.WriteLine("선택단어\t" + select.value);
@@ -130,8 +130,8 @@ namespace ImplicitTest
 
             for (int i = 0; i < 15; i++)
             {
-                Console.WriteLine("{0}\t{1}", words[i].value, words[i].gazeTime);
-                Setting.dataFile.WriteLine("{0}\t{1}", words[i].value, words[i].gazeTime);
+                Console.WriteLine("{0}\t{1}", words[i].value, (int)words[i].gazeTime);
+                Setting.dataFile.WriteLine("{0}\t{1}", words[i].value, (int)words[i].gazeTime);
             }
 
             // Console.WriteLine("==========================================");
