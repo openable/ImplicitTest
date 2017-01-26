@@ -35,11 +35,11 @@
             // 
             // content
             // 
-            this.content.Font = new System.Drawing.Font("Malgun Gothic", 31.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.content.Font = new System.Drawing.Font("Malgun Gothic", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.content.ForeColor = System.Drawing.Color.Yellow;
             this.content.Location = new System.Drawing.Point(63, 71);
             this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(111, 59);
+            this.content.Size = new System.Drawing.Size(159, 74);
             this.content.TabIndex = 0;
             this.content.Text = "내용";
             // 
