@@ -233,7 +233,7 @@ namespace ImplicitTest
             Setting.taskList.Add(item);
 
             item = new Item();
-            item.content = "두 후보 중 어느 후보가 제시된 정책을 더 잘 추진할 것이라고 생각하십니까?\n해당 사진을 클릭해 주세요.";
+            item.content = "두 후보 중 어느 후보가 제시된 정책을 더 잘 추진할 것이라고\n생각하십니까?\n해당 사진을 클릭해 주세요.";
             item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
             Setting.taskList.Add(item);
 
