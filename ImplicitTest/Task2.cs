@@ -35,11 +35,13 @@ namespace ImplicitTest
 
             current = num + 1;
             taskNum.Text = "문항 " + (current);
+            Item task = (Item)Setting.taskList[num];
 
             Setting.rawFile.WriteLine("==========================================");
             Setting.rawFile.WriteLine("문항번호: " + current);
+            Setting.rawFile.WriteLine("문항유형: " + task.type);
             Setting.rawFile.Write("선택순서:\t");
-            initStimulus((Item)Setting.taskList[num]);
+            initStimulus(task);
 
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
 
@@ -48,8 +50,6 @@ namespace ImplicitTest
 
         private void initStimulus(Item item)
         {
-            Setting.rawFile.WriteLine("문항유형: " + item.type);
-
             item.shuffle();
 
             if (item.stimulus.Contains("s.png"))
