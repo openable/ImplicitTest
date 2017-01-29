@@ -48,6 +48,8 @@ namespace ImplicitTest
 
         private void initStimulus(Item item)
         {
+            Setting.rawFile.WriteLine("문항유형: " + item.type);
+
             item.shuffle();
 
             if (item.stimulus.Contains("s.png"))
