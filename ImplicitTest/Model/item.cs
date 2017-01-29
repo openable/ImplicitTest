@@ -26,5 +26,23 @@ namespace ImplicitTest.Model
             this.type = type;
             this.stimulus = stimulus;
         }
+
+        public void shuffle()
+        {
+            int r1;
+            int r2;
+            string temp;
+            Random r = new Random();
+
+            for (int i = 0; i < choice.Length; i++)
+            {
+                r1 = r.Next(0, choice.Length);
+                r2 = r.Next(0, choice.Length);
+
+                temp = choice[r1];
+                choice[r1] = choice[r2];
+                choice[r2] = temp;
+            }
+        }
     }
 }
