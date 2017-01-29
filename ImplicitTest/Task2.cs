@@ -41,7 +41,7 @@ namespace ImplicitTest
             Setting.rawFile.WriteLine("문항번호:\t" + current);
             Setting.rawFile.WriteLine("문항유형:\t" + task.type);
             Setting.rawFile.WriteLine("제시자극:\t" + task.stimulus);
-            Setting.rawFile.Write("선택순서:\t");
+            Setting.rawFile.WriteLine("선택순서:");
             initStimulus(task);
 
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
@@ -98,7 +98,33 @@ namespace ImplicitTest
             }
             choice[0].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[0]);
-            Setting.rawFile.Write(item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t");
+            if (item.choice[0].Contains("s.png"))
+            {
+                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                    item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t",
+                    (int)(Setting.margin.X + Setting.xInterval * 5) - Setting.xBuffer,
+                    (int)Setting.cWord[0].Y - Setting.yBuffer,
+                    (int)(Setting.margin.X + Setting.xInterval * 5) + 210 + Setting.xBuffer,
+                    (int)Setting.cWord[0].Y + 280 + Setting.yBuffer);
+            }
+            else if (item.choice[0].Contains(".png"))
+            {
+                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                    item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t",
+                    (int)(Setting.margin.X + Setting.xInterval * 5) - Setting.xBuffer,
+                    (int)Setting.cWord[0].Y - Setting.yBuffer,
+                    (int)(Setting.margin.X + Setting.xInterval * 5) + 300 + Setting.xBuffer,
+                    (int)Setting.cWord[0].Y + 400 + Setting.yBuffer);
+            }
+            else
+            {
+                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                    item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t",
+                    (int)(Setting.cWord[5].X + Setting.xInterval * 4) - Setting.xBuffer,
+                    (int)Setting.cWord[5].Y,
+                    (int)(Setting.cWord[5].X + Setting.xInterval * 4) + (int)Setting.sWord.X + Setting.xBuffer,
+                    (int)Setting.cWord[5].Y + (int)(Setting.sWord.Y * 1.5) + Setting.yBuffer);
+            }
 
             if (item.choice[1].Contains("s.png"))
             {
@@ -126,9 +152,33 @@ namespace ImplicitTest
             }
             choice[1].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[1]);
-            Setting.rawFile.Write(item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t");
-
-            Setting.rawFile.WriteLine();
+            if (item.choice[1].Contains("s.png"))
+            {
+                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                    item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t",
+                    (int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 210)) - Setting.xBuffer,
+                    (int)Setting.cWord[4].Y - Setting.yBuffer,
+                    (int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 210)) + 210 + Setting.xBuffer,
+                    (int)Setting.cWord[4].Y + 280 + Setting.yBuffer);
+            }
+            else if (item.choice[1].Contains(".png"))
+            {
+                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                    item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t",
+                    (int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 300)) - Setting.xBuffer,
+                    (int)Setting.cWord[4].Y - Setting.yBuffer,
+                    (int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 300)) + 300 + Setting.xBuffer,
+                    (int)Setting.cWord[4].Y + 400 + Setting.yBuffer);
+            }
+            else
+            {
+                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                    item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t",
+                    (int)(Setting.cWord[9].X - Setting.xInterval * 4) - Setting.xBuffer,
+                    (int)Setting.cWord[9].Y,
+                    (int)(Setting.cWord[9].X - Setting.xInterval * 4) + (int)Setting.sWord.X + Setting.xBuffer,
+                    (int)Setting.cWord[9].Y + (int)(Setting.sWord.Y * 1.5) + Setting.yBuffer);
+            }
         }
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)

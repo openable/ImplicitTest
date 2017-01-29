@@ -41,7 +41,7 @@ namespace ImplicitTest
             Setting.rawFile.WriteLine("문항번호:\t" + current);
             Setting.rawFile.WriteLine("문항유형:\t" + task.type);
             Setting.rawFile.WriteLine("제시자극:\t" + task.stimulus);
-            Setting.rawFile.Write("선택순서:\t");
+            Setting.rawFile.WriteLine("선택순서:");
             initStimulus(task);
 
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
@@ -78,9 +78,13 @@ namespace ImplicitTest
                 words[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
                 words[i].Click += new System.EventHandler(this.word_Click);
                 this.Controls.Add(words[i]);
-                Setting.rawFile.Write(item.choice[i].Replace("\r\n", " ").Replace(",", " +") + "\t");
+                Setting.rawFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}",
+                    item.choice[i].Replace("\r\n", " ").Replace(",", " +") + "\t",
+                    (int)Setting.cWord[i].X - Setting.xBuffer,
+                    (int)Setting.cWord[i].Y - Setting.yBuffer,
+                    (int)Setting.cWord[i].X + (int)Setting.sWord.X + Setting.xBuffer,
+                    (int)Setting.cWord[i].Y + (int)Setting.sWord.Y + Setting.yBuffer);
             }
-            Setting.rawFile.WriteLine();
         }
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
