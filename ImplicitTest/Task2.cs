@@ -100,7 +100,7 @@ namespace ImplicitTest
             this.Controls.Add(choice[0]);
             if (item.choice[0].Contains("s.png"))
             {
-                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                Setting.rawFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}",
                     item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.margin.X + Setting.xInterval * 5) - Setting.xBuffer,
                     (int)Setting.cWord[0].Y - Setting.yBuffer,
@@ -109,7 +109,7 @@ namespace ImplicitTest
             }
             else if (item.choice[0].Contains(".png"))
             {
-                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                Setting.rawFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}",
                     item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.margin.X + Setting.xInterval * 5) - Setting.xBuffer,
                     (int)Setting.cWord[0].Y - Setting.yBuffer,
@@ -118,7 +118,7 @@ namespace ImplicitTest
             }
             else
             {
-                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                Setting.rawFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}",
                     item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.cWord[5].X + Setting.xInterval * 4) - Setting.xBuffer,
                     (int)Setting.cWord[5].Y,
@@ -154,7 +154,7 @@ namespace ImplicitTest
             this.Controls.Add(choice[1]);
             if (item.choice[1].Contains("s.png"))
             {
-                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                Setting.rawFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}",
                     item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 210)) - Setting.xBuffer,
                     (int)Setting.cWord[4].Y - Setting.yBuffer,
@@ -163,7 +163,7 @@ namespace ImplicitTest
             }
             else if (item.choice[1].Contains(".png"))
             {
-                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                Setting.rawFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}",
                     item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 300)) - Setting.xBuffer,
                     (int)Setting.cWord[4].Y - Setting.yBuffer,
@@ -172,7 +172,7 @@ namespace ImplicitTest
             }
             else
             {
-                Setting.rawFile.Write("{0}\t{1}\t{2}\t{3}\t{4}",
+                Setting.rawFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}",
                     item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.cWord[9].X - Setting.xInterval * 4) - Setting.xBuffer,
                     (int)Setting.cWord[9].Y,
