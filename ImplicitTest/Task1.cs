@@ -40,6 +40,7 @@ namespace ImplicitTest
             Setting.rawFile.WriteLine("==========================================");
             Setting.rawFile.WriteLine("문항번호: " + current);
             Setting.rawFile.WriteLine("문항유형: " + task.type);
+            Setting.rawFile.WriteLine("제시자극: " + task.stimulus);
             Setting.rawFile.Write("선택순서:\t");
             initStimulus(task);
 
