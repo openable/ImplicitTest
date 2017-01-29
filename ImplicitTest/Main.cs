@@ -289,18 +289,19 @@ namespace ImplicitTest
 
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             Setting.ID = nameBox.Text;
+            Encoding encode = System.Text.Encoding.GetEncoding("ks_c_5601-1987");
 
             if (startNum.Text.Equals("1"))
             {
-                Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-data.txt", true);
-                Setting.csvFile = new StreamWriter(path + "\\" + nameBox.Text + "-data.csv", true);
-                Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-raw.txt", true);
+                Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-data.txt", true, encode);
+                Setting.csvFile = new StreamWriter(path + "\\" + nameBox.Text + "-data.csv", true, encode);
+                Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-raw.txt", true, encode);
             }
             else
             {
-                Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-data.txt", true);
-                Setting.csvFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-data.csv", true);
-                Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-raw.txt", true);
+                Setting.dataFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-data.txt", true, encode);
+                Setting.csvFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-data.csv", true, encode);
+                Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-raw.txt", true, encode);
             }
             Setting.csvFile.WriteLine("피험자 ID,문항번호,응답시간,선택단어,단어,Eye Track time (ms)");
             Setting.rawEye = new StringBuilder();
