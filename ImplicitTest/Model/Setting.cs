@@ -12,6 +12,7 @@ namespace ImplicitTest.Model
     class Setting
     {
         public static StreamWriter dataFile;
+        public static StreamWriter csvFile;
         public static StreamWriter rawFile;
         public static StringBuilder rawEye;
 
