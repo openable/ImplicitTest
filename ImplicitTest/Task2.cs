@@ -48,6 +48,8 @@ namespace ImplicitTest
 
         private void initStimulus(Item item)
         {
+            item.shuffle();
+
             if (item.stimulus.Contains("s.png"))
             {
                 stimulus = new Word(item.stimulus, true, true);
