@@ -95,7 +95,7 @@ namespace ImplicitTest
             }
             choice[0].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[0]);
-            Setting.rawFile.Write(item.choice[0] + "\t");
+            Setting.rawFile.Write(item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t");
 
             if (item.choice[1].Contains("s.png"))
             {
@@ -123,7 +123,7 @@ namespace ImplicitTest
             }
             choice[1].Click += new System.EventHandler(this.word_Click);
             this.Controls.Add(choice[1]);
-            Setting.rawFile.Write(item.choice[1] + "\t");
+            Setting.rawFile.Write(item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t");
 
             Setting.rawFile.WriteLine();
         }

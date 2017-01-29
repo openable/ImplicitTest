@@ -75,7 +75,7 @@ namespace ImplicitTest
                 words[i].SetBounds((int)Setting.cWord[i].X, (int)Setting.cWord[i].Y, (int)Setting.sWord.X, (int)Setting.sWord.Y);
                 words[i].Click += new System.EventHandler(this.word_Click);
                 this.Controls.Add(words[i]);
-                Setting.rawFile.Write(item.choice[i] + "\t");
+                Setting.rawFile.Write(item.choice[i].Replace("\r\n", " ").Replace(",", " +") + "\t");
             }
             Setting.rawFile.WriteLine();
         }
