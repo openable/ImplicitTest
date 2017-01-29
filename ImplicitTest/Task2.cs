@@ -180,6 +180,8 @@ namespace ImplicitTest
             {
                 Console.WriteLine("{0}\t{1}", choice[i].value, (int)choice[i].gazeTime);
                 Setting.dataFile.WriteLine("{0}\t{1}", choice[i].value, (int)choice[i].gazeTime);
+                Setting.csvFile.WriteLine(string.Format("{0},{1},{2},{3},{4},{5}",
+                    Setting.ID, current, sw.ElapsedMilliseconds.ToString(), select.value, choice[i].value, (int)choice[i].gazeTime));
             }
 
             // Console.WriteLine("==========================================");
