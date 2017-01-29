@@ -116,12 +116,14 @@ namespace ImplicitTest
             Setting.dataFile.WriteLine("문항번호\t" + current);
 
             sw.Stop();
-            Console.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "\tms");
-            Setting.dataFile.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "\tms");
+            Console.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "\t ms");
+            Setting.dataFile.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "\t ms");
+            Setting.rawFile.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "\t ms");
 
             Word select = (Word)sender;
             Console.WriteLine("선택단어\t" + select.value.Replace("\r\n", " ").Replace(",", " +"));
             Setting.dataFile.WriteLine("선택단어\t" + select.value.Replace("\r\n", " ").Replace(",", " +"));
+            Setting.rawFile.WriteLine("선택단어\t" + select.value.Replace("\r\n", " ").Replace(",", " +"));
 
             Setting.rawFile.WriteLine(Setting.rawEye);
             Setting.rawEye.Clear();
