@@ -120,8 +120,8 @@ namespace ImplicitTest
             Setting.dataFile.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "\tms");
 
             Word select = (Word)sender;
-            Console.WriteLine("선택단어\t" + select.value);
-            Setting.dataFile.WriteLine("선택단어\t" + select.value);
+            Console.WriteLine("선택단어\t" + select.value.Replace("\n", " "));
+            Setting.dataFile.WriteLine("선택단어\t" + select.value.Replace("\n", " "));
 
             Setting.rawFile.WriteLine(Setting.rawEye);
             Setting.rawEye.Clear();
@@ -132,10 +132,12 @@ namespace ImplicitTest
 
             for (int i = 0; i < 15; i++)
             {
-                Console.WriteLine("{0}\t{1}", words[i].value, (int)words[i].gazeTime);
-                Setting.dataFile.WriteLine("{0}\t{1}", words[i].value, (int)words[i].gazeTime);
+                string word = words[i].value.Replace("\n", " ");
+
+                Console.WriteLine("{0}\t{1}", word, (int)words[i].gazeTime);
+                Setting.dataFile.WriteLine("{0}\t{1}", word, (int)words[i].gazeTime);
                 Setting.csvFile.WriteLine(string.Format("{0},{1},{2},{3},{4},{5}",
-                    Setting.ID, current, sw.ElapsedMilliseconds.ToString(), select.value, words[i].value, (int)words[i].gazeTime));
+                    Setting.ID, current, sw.ElapsedMilliseconds.ToString(), select.value, word, (int)words[i].gazeTime));
             }
 
             // Console.WriteLine("==========================================");
