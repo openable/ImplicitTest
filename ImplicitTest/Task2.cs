@@ -34,13 +34,13 @@ namespace ImplicitTest
             this.WindowState = FormWindowState.Maximized;
 
             current = num + 1;
-            taskNum.Text = "문항 " + (current);
+            taskNum.Text = "문항\t" + (current);
             Item task = (Item)Setting.taskList[num];
 
             Setting.rawFile.WriteLine("==========================================");
-            Setting.rawFile.WriteLine("문항번호: " + current);
-            Setting.rawFile.WriteLine("문항유형: " + task.type);
-            Setting.rawFile.WriteLine("제시자극: " + task.stimulus);
+            Setting.rawFile.WriteLine("문항번호:\t" + current);
+            Setting.rawFile.WriteLine("문항유형:\t" + task.type);
+            Setting.rawFile.WriteLine("제시자극:\t" + task.stimulus);
             Setting.rawFile.Write("선택순서:\t");
             initStimulus(task);
 
