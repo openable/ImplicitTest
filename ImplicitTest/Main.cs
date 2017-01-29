@@ -345,6 +345,7 @@ namespace ImplicitTest
                 Setting.dataFile.WriteLine("[실험 종료]");
                 Setting.rawFile.WriteLine("[실험 종료]");
                 Setting.dataFile.Close();
+                Setting.csvFile.Close();
                 Setting.rawFile.Close();
                 back.Close();
                 this.Close();
