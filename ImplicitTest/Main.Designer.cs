@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.RadioButton eyeOption2;
+            System.Windows.Forms.RadioButton pictureType2;
             this.phoneBox = new System.Windows.Forms.TextBox();
             this.nameBox = new System.Windows.Forms.TextBox();
             this.phoneLabel = new System.Windows.Forms.Label();
@@ -36,13 +38,16 @@
             this.screenBtn = new System.Windows.Forms.Button();
             this.startBtn = new System.Windows.Forms.Button();
             this.settingGroup = new System.Windows.Forms.GroupBox();
-            this.eyeOption2 = new System.Windows.Forms.RadioButton();
-            this.eyeOption1 = new System.Windows.Forms.RadioButton();
             this.fontNum = new System.Windows.Forms.TextBox();
             this.startNum = new System.Windows.Forms.TextBox();
             this.eyeLabel = new System.Windows.Forms.Label();
             this.fontLabel = new System.Windows.Forms.Label();
             this.startLabel = new System.Windows.Forms.Label();
+            this.pictureLabel = new System.Windows.Forms.Label();
+            this.pictureType1 = new System.Windows.Forms.RadioButton();
+            this.eyeOption1 = new System.Windows.Forms.RadioButton();
+            eyeOption2 = new System.Windows.Forms.RadioButton();
+            pictureType2 = new System.Windows.Forms.RadioButton();
             this.settingGroup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,7 +96,7 @@
             // 
             // screenBtn
             // 
-            this.screenBtn.Font = new System.Drawing.Font("Malgun Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.screenBtn.Font = new System.Drawing.Font("맑은 고딕", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.screenBtn.Location = new System.Drawing.Point(56, 80);
             this.screenBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.screenBtn.Name = "screenBtn";
@@ -103,7 +108,7 @@
             // 
             // startBtn
             // 
-            this.startBtn.Location = new System.Drawing.Point(56, 318);
+            this.startBtn.Location = new System.Drawing.Point(56, 320);
             this.startBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.startBtn.Name = "startBtn";
             this.startBtn.Size = new System.Drawing.Size(109, 27);
@@ -114,45 +119,36 @@
             // 
             // settingGroup
             // 
-            this.settingGroup.Controls.Add(this.eyeOption2);
+            this.settingGroup.Controls.Add(pictureType2);
+            this.settingGroup.Controls.Add(eyeOption2);
+            this.settingGroup.Controls.Add(this.pictureType1);
             this.settingGroup.Controls.Add(this.eyeOption1);
             this.settingGroup.Controls.Add(this.fontNum);
+            this.settingGroup.Controls.Add(this.pictureLabel);
             this.settingGroup.Controls.Add(this.startNum);
             this.settingGroup.Controls.Add(this.eyeLabel);
             this.settingGroup.Controls.Add(this.fontLabel);
             this.settingGroup.Controls.Add(this.startLabel);
             this.settingGroup.Location = new System.Drawing.Point(12, 170);
             this.settingGroup.Name = "settingGroup";
-            this.settingGroup.Size = new System.Drawing.Size(200, 130);
+            this.settingGroup.Size = new System.Drawing.Size(200, 140);
             this.settingGroup.TabIndex = 12;
             this.settingGroup.TabStop = false;
             this.settingGroup.Text = "실험 환경 설정";
             // 
             // eyeOption2
             // 
-            this.eyeOption2.AutoSize = true;
-            this.eyeOption2.Checked = true;
-            this.eyeOption2.Location = new System.Drawing.Point(114, 88);
-            this.eyeOption2.Name = "eyeOption2";
-            this.eyeOption2.Size = new System.Drawing.Size(59, 16);
-            this.eyeOption2.TabIndex = 7;
-            this.eyeOption2.TabStop = true;
-            this.eyeOption2.Text = "아니오";
-            this.eyeOption2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.eyeOption2.UseVisualStyleBackColor = true;
-            this.eyeOption2.CheckedChanged += new System.EventHandler(this.eyeOption2_CheckedChanged);
-            // 
-            // eyeOption1
-            // 
-            this.eyeOption1.AutoSize = true;
-            this.eyeOption1.Location = new System.Drawing.Point(73, 88);
-            this.eyeOption1.Name = "eyeOption1";
-            this.eyeOption1.Size = new System.Drawing.Size(35, 16);
-            this.eyeOption1.TabIndex = 6;
-            this.eyeOption1.Text = "예";
-            this.eyeOption1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.eyeOption1.UseVisualStyleBackColor = true;
-            this.eyeOption1.CheckedChanged += new System.EventHandler(this.eyeOption1_CheckedChanged);
+            eyeOption2.AutoSize = true;
+            eyeOption2.Checked = global::ImplicitTest.Properties.Settings.Default.eye;
+            eyeOption2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ImplicitTest.Properties.Settings.Default, "eye", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            eyeOption2.Location = new System.Drawing.Point(114, 118);
+            eyeOption2.Name = "eyeOption2";
+            eyeOption2.Size = new System.Drawing.Size(59, 16);
+            eyeOption2.TabIndex = 7;
+            eyeOption2.Text = "아니오";
+            eyeOption2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            eyeOption2.UseVisualStyleBackColor = true;
+            eyeOption2.CheckedChanged += new System.EventHandler(this.eyeOption2_CheckedChanged);
             // 
             // fontNum
             // 
@@ -175,7 +171,7 @@
             // eyeLabel
             // 
             this.eyeLabel.AutoSize = true;
-            this.eyeLabel.Location = new System.Drawing.Point(10, 90);
+            this.eyeLabel.Location = new System.Drawing.Point(10, 120);
             this.eyeLabel.Name = "eyeLabel";
             this.eyeLabel.Size = new System.Drawing.Size(61, 12);
             this.eyeLabel.TabIndex = 15;
@@ -198,6 +194,52 @@
             this.startLabel.Size = new System.Drawing.Size(61, 12);
             this.startLabel.TabIndex = 13;
             this.startLabel.Text = "시작 위치:";
+            // 
+            // pictureLabel
+            // 
+            this.pictureLabel.AutoSize = true;
+            this.pictureLabel.Location = new System.Drawing.Point(10, 90);
+            this.pictureLabel.Name = "pictureLabel";
+            this.pictureLabel.Size = new System.Drawing.Size(61, 12);
+            this.pictureLabel.TabIndex = 18;
+            this.pictureLabel.Text = "사진 유형:";
+            // 
+            // pictureType2
+            // 
+            pictureType2.AutoSize = true;
+            pictureType2.Checked = global::ImplicitTest.Properties.Settings.Default.picture;
+            pictureType2.Location = new System.Drawing.Point(114, 88);
+            pictureType2.Name = "pictureType2";
+            pictureType2.Size = new System.Drawing.Size(31, 16);
+            pictureType2.TabIndex = 19;
+            pictureType2.Text = "B";
+            pictureType2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            pictureType2.UseVisualStyleBackColor = true;
+            // 
+            // pictureType1
+            // 
+            this.pictureType1.AutoSize = true;
+            this.pictureType1.Location = new System.Drawing.Point(73, 88);
+            this.pictureType1.Name = "pictureType1";
+            this.pictureType1.Size = new System.Drawing.Size(31, 16);
+            this.pictureType1.TabIndex = 16;
+            this.pictureType1.Text = "A";
+            this.pictureType1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureType1.UseVisualStyleBackColor = true;
+            // 
+            // eyeOption1
+            // 
+            this.eyeOption1.AutoSize = true;
+            this.eyeOption1.Checked = global::ImplicitTest.Properties.Settings.Default.eye;
+            this.eyeOption1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::ImplicitTest.Properties.Settings.Default, "eye", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.eyeOption1.Location = new System.Drawing.Point(73, 118);
+            this.eyeOption1.Name = "eyeOption1";
+            this.eyeOption1.Size = new System.Drawing.Size(35, 16);
+            this.eyeOption1.TabIndex = 6;
+            this.eyeOption1.Text = "예";
+            this.eyeOption1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.eyeOption1.UseVisualStyleBackColor = true;
+            this.eyeOption1.CheckedChanged += new System.EventHandler(this.eyeOption1_CheckedChanged);
             // 
             // Main
             // 
@@ -235,10 +277,11 @@
         private System.Windows.Forms.Label eyeLabel;
         private System.Windows.Forms.Label fontLabel;
         private System.Windows.Forms.Label startLabel;
-        private System.Windows.Forms.RadioButton eyeOption2;
         private System.Windows.Forms.RadioButton eyeOption1;
         private System.Windows.Forms.TextBox fontNum;
         private System.Windows.Forms.TextBox startNum;
+        private System.Windows.Forms.RadioButton pictureType1;
+        private System.Windows.Forms.Label pictureLabel;
     }
 }
 
