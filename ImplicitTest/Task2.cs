@@ -51,7 +51,8 @@ namespace ImplicitTest
 
         private void initStimulus(Item item)
         {
-            item.shuffle();
+            //item.shuffle();
+            if (!Setting.pictureType) item.reverse();
 
             if (item.stimulus.Contains("s.png"))
             {

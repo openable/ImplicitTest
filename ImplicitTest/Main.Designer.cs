@@ -156,12 +156,10 @@
             // pictureType1
             // 
             this.pictureType1.AutoSize = true;
-            this.pictureType1.Checked = true;
             this.pictureType1.Location = new System.Drawing.Point(38, 15);
             this.pictureType1.Name = "pictureType1";
             this.pictureType1.Size = new System.Drawing.Size(31, 16);
             this.pictureType1.TabIndex = 16;
-            this.pictureType1.TabStop = true;
             this.pictureType1.Text = "A";
             this.pictureType1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.pictureType1.UseVisualStyleBackColor = true;

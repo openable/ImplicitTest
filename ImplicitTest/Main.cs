@@ -385,12 +385,18 @@ namespace ImplicitTest
 
         private void pictureType1_CheckedChanged(object sender, EventArgs e)
         {
-            Setting.pictureType = true;
+            if (pictureType1.Checked)
+                Setting.pictureType = true;
+            else
+                Setting.pictureType = false;
         }
 
         private void pictureType2_CheckedChanged(object sender, EventArgs e)
         {
-            Setting.pictureType = false;
+            if (pictureType2.Checked)
+                Setting.pictureType = false;
+            else
+                Setting.pictureType = true;
         }
     }
 }
