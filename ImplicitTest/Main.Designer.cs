@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.RadioButton eyeOption2;
-            System.Windows.Forms.RadioButton pictureType2;
             this.phoneBox = new System.Windows.Forms.TextBox();
             this.nameBox = new System.Windows.Forms.TextBox();
             this.phoneLabel = new System.Windows.Forms.Label();
@@ -38,15 +37,15 @@
             this.screenBtn = new System.Windows.Forms.Button();
             this.startBtn = new System.Windows.Forms.Button();
             this.eyeGroup = new System.Windows.Forms.GroupBox();
-            this.pictureType1 = new System.Windows.Forms.RadioButton();
             this.eyeOption1 = new System.Windows.Forms.RadioButton();
+            this.pictureType1 = new System.Windows.Forms.RadioButton();
             this.fontNum = new System.Windows.Forms.TextBox();
             this.startNum = new System.Windows.Forms.TextBox();
             this.fontLabel = new System.Windows.Forms.Label();
             this.startLabel = new System.Windows.Forms.Label();
             this.pictureGroup = new System.Windows.Forms.GroupBox();
+            this.pictureType2 = new System.Windows.Forms.RadioButton();
             eyeOption2 = new System.Windows.Forms.RadioButton();
-            pictureType2 = new System.Windows.Forms.RadioButton();
             this.eyeGroup.SuspendLayout();
             this.pictureGroup.SuspendLayout();
             this.SuspendLayout();
@@ -64,17 +63,6 @@
             eyeOption2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             eyeOption2.UseVisualStyleBackColor = true;
             eyeOption2.CheckedChanged += new System.EventHandler(this.eyeOption2_CheckedChanged);
-            // 
-            // pictureType2
-            // 
-            pictureType2.AutoSize = true;
-            pictureType2.Location = new System.Drawing.Point(135, 15);
-            pictureType2.Name = "pictureType2";
-            pictureType2.Size = new System.Drawing.Size(31, 16);
-            pictureType2.TabIndex = 19;
-            pictureType2.Text = "B";
-            pictureType2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            pictureType2.UseVisualStyleBackColor = true;
             // 
             // phoneBox
             // 
@@ -153,6 +141,18 @@
             this.eyeGroup.TabStop = false;
             this.eyeGroup.Text = "시선 표시";
             // 
+            // eyeOption1
+            // 
+            this.eyeOption1.AutoSize = true;
+            this.eyeOption1.Location = new System.Drawing.Point(34, 15);
+            this.eyeOption1.Name = "eyeOption1";
+            this.eyeOption1.Size = new System.Drawing.Size(35, 16);
+            this.eyeOption1.TabIndex = 6;
+            this.eyeOption1.Text = "예";
+            this.eyeOption1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.eyeOption1.UseVisualStyleBackColor = true;
+            this.eyeOption1.CheckedChanged += new System.EventHandler(this.eyeOption1_CheckedChanged);
+            // 
             // pictureType1
             // 
             this.pictureType1.AutoSize = true;
@@ -165,18 +165,7 @@
             this.pictureType1.Text = "A";
             this.pictureType1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.pictureType1.UseVisualStyleBackColor = true;
-            // 
-            // eyeOption1
-            // 
-            this.eyeOption1.AutoSize = true;
-            this.eyeOption1.Location = new System.Drawing.Point(34, 15);
-            this.eyeOption1.Name = "eyeOption1";
-            this.eyeOption1.Size = new System.Drawing.Size(35, 16);
-            this.eyeOption1.TabIndex = 6;
-            this.eyeOption1.Text = "예";
-            this.eyeOption1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.eyeOption1.UseVisualStyleBackColor = true;
-            this.eyeOption1.CheckedChanged += new System.EventHandler(this.eyeOption1_CheckedChanged);
+            this.pictureType1.CheckedChanged += new System.EventHandler(this.pictureType1_CheckedChanged);
             // 
             // fontNum
             // 
@@ -216,14 +205,26 @@
             // 
             // pictureGroup
             // 
+            this.pictureGroup.Controls.Add(this.pictureType2);
             this.pictureGroup.Controls.Add(this.pictureType1);
-            this.pictureGroup.Controls.Add(pictureType2);
             this.pictureGroup.Location = new System.Drawing.Point(12, 220);
             this.pictureGroup.Name = "pictureGroup";
             this.pictureGroup.Size = new System.Drawing.Size(200, 40);
             this.pictureGroup.TabIndex = 13;
             this.pictureGroup.TabStop = false;
             this.pictureGroup.Text = "사진 유형";
+            // 
+            // pictureType2
+            // 
+            this.pictureType2.AutoSize = true;
+            this.pictureType2.Location = new System.Drawing.Point(135, 15);
+            this.pictureType2.Name = "pictureType2";
+            this.pictureType2.Size = new System.Drawing.Size(31, 16);
+            this.pictureType2.TabIndex = 17;
+            this.pictureType2.TabStop = true;
+            this.pictureType2.Text = "B";
+            this.pictureType2.UseVisualStyleBackColor = true;
+            this.pictureType2.CheckedChanged += new System.EventHandler(this.pictureType2_CheckedChanged);
             // 
             // Main
             // 
@@ -272,6 +273,7 @@
         private System.Windows.Forms.TextBox startNum;
         private System.Windows.Forms.RadioButton pictureType1;
         private System.Windows.Forms.GroupBox pictureGroup;
+        private System.Windows.Forms.RadioButton pictureType2;
     }
 }
 

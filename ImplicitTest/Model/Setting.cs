@@ -18,6 +18,7 @@ namespace ImplicitTest.Model
 
         public static string ID;
         public static bool eyeOption;
+        public static bool pictureType;
         public static int fontSize;
         public static int SCREEN_WIDTH;
         public static int SCREEN_HEIGHT;
