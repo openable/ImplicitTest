@@ -44,5 +44,17 @@ namespace ImplicitTest.Model
                 choice[r2] = temp;
             }
         }
+
+        public void reverse()
+        {
+            string temp;
+
+            for (int i = 0; i < choice.Length / 2; i++)
+            {
+                temp = choice[i];
+                choice[i] = choice[choice.Length - i - 1];
+                choice[choice.Length - i - 1] = temp;
+            }
+        }
     }
 }
