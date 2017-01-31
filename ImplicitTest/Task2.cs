@@ -213,6 +213,10 @@ namespace ImplicitTest
 
                 return;
             }
+            else
+            {
+                outSequece = false;
+            }
 
             if (stimulus.isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
             {
@@ -283,6 +287,7 @@ namespace ImplicitTest
 
             Setting.rawFile.WriteLine("총 응시시간:\t" + totalGaze + "\t" + (int)((totalGaze / sw.ElapsedMilliseconds) * 100));
             Setting.rawFile.WriteLine("총 이탈시간:\t" + outGaze + "\t" + (int)((outGaze / sw.ElapsedMilliseconds) * 100));
+            Setting.rawFile.WriteLine("총 이동비중:\t" + (100 - (int)((totalGaze / sw.ElapsedMilliseconds) * 100) - (int)((outGaze / sw.ElapsedMilliseconds) * 100)));
 
             Setting.rawFile.WriteLine(Setting.rawEye);
             Setting.rawEye.Clear();

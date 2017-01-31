@@ -118,6 +118,10 @@ namespace ImplicitTest
 
                 return;
             }
+            else
+            {
+                outSequece = false;
+            }
 
             if (stimulus.isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
             {
