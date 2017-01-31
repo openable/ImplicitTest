@@ -101,7 +101,8 @@ namespace ImplicitTest
             {
                 if (words[i].isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
                 {
-                    Setting.rawEye.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}", e.Timestamp, (int)e.X, (int)e.Y, words[i].value));
+                    Setting.rawEye.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}",
+                        e.Timestamp, (int)e.X, (int)e.Y, words[i].value.Replace("\r\n", " ")));
                     return;
                 }
             }
