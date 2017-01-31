@@ -24,9 +24,11 @@ namespace ImplicitTest
         private Word stimulus;
         private Word[] words = new Word[15];
         Stopwatch sw = new Stopwatch();
+
         private bool outSequece = false;
         private double outGaze = 0.0;
         private double outStart = 0.0;
+        Stopwatch osw = new Stopwatch();
 
         public Task1(int num)
         {
@@ -47,6 +49,7 @@ namespace ImplicitTest
             initStimulus(task);
 
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
+            Program.EyeXHost.GazeTrackingChanged += EyeXHost_GazeTrackingChanged;
 
             sw.Start();
         }
@@ -107,7 +110,7 @@ namespace ImplicitTest
 
             if (e.X < 0 || e.X > Setting.SCREEN_WIDTH || e.Y < 0 || e.Y > Setting.SCREEN_HEIGHT)
             {
-                Setting.rawEye.AppendLine(string.Format("{0}\t{1}\t{2}", e.Timestamp, (int)e.X, (int)e.Y));
+                Setting.rawEye.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}", e.Timestamp, (int)e.X, (int)e.Y, "-"));
 
                 if (!outSequece)
                 {
@@ -147,9 +150,34 @@ namespace ImplicitTest
             Setting.rawEye.AppendLine(string.Format("{0}\t{1}\t{2}", e.Timestamp, (int)e.X, (int)e.Y));
         }
 
+        private void EyeXHost_GazeTrackingChanged(object sender, EngineStateValue<GazeTracking> e)
+        {
+            if (Created)
+            {
+                BeginInvoke(new Action(() =>
+                {
+                    if (e.IsValid && e.Value == GazeTracking.GazeTracked)
+                    {
+                        //outSequece = false;
+                        osw.Stop();
+                        outGaze = outGaze + osw.ElapsedMilliseconds;
+                        Setting.rawEye.AppendLine("[Out End]" + "\t" + osw.ElapsedMilliseconds);
+                        osw.Reset();
+                    }
+                    else
+                    {
+                        //outSequece = true;
+                        osw.Start();
+                        Setting.rawEye.AppendLine("[Out Start]");
+                    }
+                }));
+            }
+        }
+
         private void formClosing(object sender, FormClosingEventArgs e)
         {
             lightlyFilteredGazeDataStream.Next -= gazeDataStreamHandler;
+            Program.EyeXHost.GazeTrackingChanged -= EyeXHost_GazeTrackingChanged;
             // Setting.rawFile.WriteLine("==========================================");
         }
 
