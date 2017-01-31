@@ -190,6 +190,8 @@ namespace ImplicitTest
 
         private void gazeDataStreamHandler(object sender, GazePointEventArgs e)
         {
+            //Console.WriteLine(string.Format("{0}\t{1}\t{2}", e.Timestamp, (int)e.X, (int)e.Y));
+
             if (Setting.eyeOption)
             {
                 Graphics gr = this.CreateGraphics();
