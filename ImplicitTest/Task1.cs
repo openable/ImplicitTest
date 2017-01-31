@@ -147,8 +147,10 @@ namespace ImplicitTest
             gr.Clear(Color.White);
             gr.Dispose();
 
+            double totalGaze = 0.0;
             Setting.csvFile.WriteLine("응시시간:");
             Setting.csvFile.WriteLine(stimulus.value.Replace("\r\n", " ").Replace(",", " +") + "\t" + stimulus.gazeTime);
+            totalGaze = totalGaze + stimulus.gazeTime;
 
             for (int i = 0; i < 15; i++)
             {
@@ -162,7 +164,11 @@ namespace ImplicitTest
                     word, (int)words[i].gazeTime));
 
                 Setting.csvFile.WriteLine(words[i].value.Replace("\r\n", " ").Replace(",", " +") + "\t" + words[i].gazeTime);
+                totalGaze = totalGaze + words[i].gazeTime;
             }
+            
+            Setting.csvFile.WriteLine("총 응시시간:\t" + totalGaze + "\t" + (int)((totalGaze / sw.ElapsedMilliseconds) * 100));
+            //Setting.csvFile.WriteLine("총 이탈시간:");
 
             Setting.rawFile.WriteLine(Setting.rawEye);
             Setting.rawEye.Clear();
