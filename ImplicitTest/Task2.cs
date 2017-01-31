@@ -40,8 +40,7 @@ namespace ImplicitTest
             Setting.rawFile.WriteLine("==========================================");
             Setting.rawFile.WriteLine("문항번호:\t" + current);
             Setting.rawFile.WriteLine("문항유형:\t" + task.type);
-            Setting.rawFile.WriteLine("제시자극:\t" + task.stimulus);
-            Setting.rawFile.WriteLine("선택순서:");
+
             initStimulus(task);
 
             lightlyFilteredGazeDataStream.Next += gazeDataStreamHandler;
@@ -72,7 +71,11 @@ namespace ImplicitTest
                 stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
             }
             this.Controls.Add(stimulus);
+            Setting.rawFile.WriteLine("제시자극:\t" + item.stimulus +
+                "\t" + (stimulus.Location.X - Setting.xBuffer) + "\t" + (stimulus.Location.Y - Setting.yBuffer) +
+                "\t" + (stimulus.Location.X + stimulus.Size.Width + Setting.xBuffer) + "\t" + (stimulus.Location.Y + stimulus.Size.Height + Setting.yBuffer));
 
+            Setting.rawFile.WriteLine("선택순서:");
             if (item.choice[0].Contains("s.png"))
             {
                 choice[0] = new Word(item.choice[0], true, false);
