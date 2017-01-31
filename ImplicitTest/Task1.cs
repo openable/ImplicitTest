@@ -24,6 +24,9 @@ namespace ImplicitTest
         private Word stimulus;
         private Word[] words = new Word[15];
         Stopwatch sw = new Stopwatch();
+        private bool outSequece = false;
+        private double outGaze = 0.0;
+        private double outStart = 0.0;
 
         public Task1(int num)
         {
@@ -100,6 +103,22 @@ namespace ImplicitTest
                 gr.Dispose();
             }
 
+            if (e.X < 0 || e.X > Setting.SCREEN_WIDTH || e.Y < 0 || e.Y > Setting.SCREEN_HEIGHT)
+            {
+                if (!outSequece)
+                {
+                    outSequece = true;
+                    outStart = e.Timestamp;
+                }
+                else
+                {
+                    outGaze = outGaze + (e.Timestamp - outStart);
+                    outStart = e.Timestamp;
+                }
+
+                return;
+            }
+
             if (stimulus.isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
             {
                 Setting.rawEye.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}",
@@ -168,7 +187,7 @@ namespace ImplicitTest
             }
             
             Setting.csvFile.WriteLine("총 응시시간:\t" + totalGaze + "\t" + (int)((totalGaze / sw.ElapsedMilliseconds) * 100));
-            //Setting.csvFile.WriteLine("총 이탈시간:");
+            Setting.csvFile.WriteLine("총 이탈시간:\t" + outGaze + "\t" + (int)((outGaze / sw.ElapsedMilliseconds) * 100));
 
             Setting.rawFile.WriteLine(Setting.rawEye);
             Setting.rawEye.Clear();
