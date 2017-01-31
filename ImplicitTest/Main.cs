@@ -315,9 +315,9 @@ namespace ImplicitTest
             Setting.rawEye = new StringBuilder();
 
             this.Hide();
-            Console.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text);
-            Setting.dataFile.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text);
-            Setting.rawFile.WriteLine("[실험 시작]\t" + nameBox.Text + " - " + phoneBox.Text);
+            Console.WriteLine("[실험 시작]\t" + nameBox.Text + "\t" + phoneBox.Text + "\t" + Setting.SCREEN_WIDTH + "\t" + Setting.SCREEN_HEIGHT);
+            Setting.dataFile.WriteLine("[실험 시작]\t" + nameBox.Text + "\t" + phoneBox.Text + "\t" + Setting.SCREEN_WIDTH + "\t" + Setting.SCREEN_HEIGHT);
+            Setting.rawFile.WriteLine("[실험 시작]\t" + nameBox.Text + "\t" + phoneBox.Text + "\t" + Setting.SCREEN_WIDTH + "\t" + Setting.SCREEN_HEIGHT);
             // 시작하는 위치 설정 변수 current, 값 바꾸면 중간 부터 시작
             current = Convert.ToInt16(startNum.Text) - 1;
             Setting.fontSize = Convert.ToInt16(fontNum.Text);
