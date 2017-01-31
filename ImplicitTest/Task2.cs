@@ -200,6 +200,8 @@ namespace ImplicitTest
 
             if (e.X < 0 || e.X > Setting.SCREEN_WIDTH || e.Y < 0 || e.Y > Setting.SCREEN_HEIGHT)
             {
+                Setting.rawEye.AppendLine(string.Format("{0}\t{1}\t{2}", e.Timestamp, (int)e.X, (int)e.Y));
+
                 if (!outSequece)
                 {
                     outSequece = true;
