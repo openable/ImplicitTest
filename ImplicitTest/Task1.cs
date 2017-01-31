@@ -100,6 +100,13 @@ namespace ImplicitTest
                 gr.Dispose();
             }
 
+            if (stimulus.isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
+            {
+                Setting.rawEye.AppendLine(string.Format("{0}\t{1}\t{2}\t{3}",
+                    e.Timestamp, (int)e.X, (int)e.Y, stimulus.value.Replace("\r\n", " ")));
+                return;
+            }
+
             for (int i = 0; i < 15; i++)
             {
                 if (words[i].isGazeHit(e.Timestamp, (int)e.X, (int)e.Y))
