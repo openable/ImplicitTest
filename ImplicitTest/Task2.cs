@@ -262,8 +262,8 @@ namespace ImplicitTest
             gr.Dispose();
 
             double totalGaze = 0.0;
-            Setting.csvFile.WriteLine("응시시간:");
-            Setting.csvFile.WriteLine(stimulus.value.Replace("\r\n", " ").Replace(",", " +") + "\t" + stimulus.gazeTime);
+            Setting.rawFile.WriteLine("응시시간:");
+            Setting.rawFile.WriteLine(stimulus.value.Replace("\r\n", " ").Replace(",", " +") + "\t" + stimulus.gazeTime);
             totalGaze = totalGaze + stimulus.gazeTime;
 
             for (int i = 0; i < 2; i++)
@@ -277,12 +277,12 @@ namespace ImplicitTest
                     sw.ElapsedMilliseconds.ToString(), select.value.Replace("\r\n", " ").Replace(",", " +"),
                     word, (int)choice[i].gazeTime));
 
-                Setting.csvFile.WriteLine(choice[i].value.Replace("\r\n", " ").Replace(",", " +") + "\t" + choice[i].gazeTime);
+                Setting.rawFile.WriteLine(choice[i].value.Replace("\r\n", " ").Replace(",", " +") + "\t" + choice[i].gazeTime);
                 totalGaze = totalGaze + choice[i].gazeTime;
             }
 
-            Setting.csvFile.WriteLine("총 응시시간:\t" + totalGaze + "\t" + (int)((totalGaze / sw.ElapsedMilliseconds) * 100));
-            Setting.csvFile.WriteLine("총 이탈시간:\t" + outGaze + "\t" + (int)((outGaze / sw.ElapsedMilliseconds) * 100));
+            Setting.rawFile.WriteLine("총 응시시간:\t" + totalGaze + "\t" + (int)((totalGaze / sw.ElapsedMilliseconds) * 100));
+            Setting.rawFile.WriteLine("총 이탈시간:\t" + outGaze + "\t" + (int)((outGaze / sw.ElapsedMilliseconds) * 100));
 
             Setting.rawFile.WriteLine(Setting.rawEye);
             Setting.rawEye.Clear();
