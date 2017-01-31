@@ -146,8 +146,10 @@ namespace ImplicitTest
 
                 Console.WriteLine("{0}\t{1}", word, (int)words[i].gazeTime);
                 Setting.dataFile.WriteLine("{0}\t{1}", word, (int)words[i].gazeTime);
-                Setting.csvFile.WriteLine(string.Format("{0},{1},{2},{3},{4},{5}",
-                    Setting.ID, current, sw.ElapsedMilliseconds.ToString(), select.value.Replace("\r\n", " ").Replace(",", " +"), word, (int)words[i].gazeTime));
+                Setting.csvFile.WriteLine(string.Format("{0},{1},{2},{3},{4},{5},{6}",
+                    Setting.ID, current, stimulus.value.Replace("\r\n", " "),
+                    sw.ElapsedMilliseconds.ToString(), select.value.Replace("\r\n", " ").Replace(",", " +"),
+                    word, (int)words[i].gazeTime));
             }
 
             // Console.WriteLine("==========================================");

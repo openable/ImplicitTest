@@ -311,7 +311,7 @@ namespace ImplicitTest
                 Setting.csvFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-data.csv", true, encode);
                 Setting.rawFile = new StreamWriter(path + "\\" + nameBox.Text + "-" + startNum.Text + "-raw.txt", true, encode);
             }
-            Setting.csvFile.WriteLine("피험자 ID,문항번호,응답시간,선택단어,단어,Eye Track time (ms)");
+            Setting.csvFile.WriteLine("피험자 ID,문항번호,제시자극,응답시간,선택단어,단어,Eye Track time (ms)");
             Setting.rawEye = new StringBuilder();
 
             this.Hide();
