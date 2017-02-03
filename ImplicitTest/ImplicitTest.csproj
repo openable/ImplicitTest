@@ -136,10 +136,10 @@
     <Content Include="Model\뱀s.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Model\안철수.jpg">
+    <Content Include="Model\안철수.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Model\안철수s.jpg">
+    <Content Include="Model\안철수s.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Model\토끼.png">
