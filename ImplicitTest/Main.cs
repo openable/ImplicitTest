@@ -151,26 +151,26 @@ namespace ImplicitTest
             Setting.taskList.Add(item);
 
             item = new Item();
-            item.content = "반기문 후보와 가장 연관된 단어 한 개를 클릭해 주세요.";
+            item.content = "안철수 후보와 가장 연관된 단어 한 개를 클릭해 주세요.";
             item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
             Setting.taskList.Add(item);
 
             //반 연상단어 1번
-            item = new Item(1, "반기문s.png");
+            item = new Item(1, "안철수s.png");
             item.choice = new string[15]{"유리멘탈", "기회주의", "눈치", "무능", "노무현 배신",
                                         "엘리트", "소통 의지", "경청", "친미", "거목",
                                         "기름장어", "대선 포기", "신천지", "친박", "고령"};
             Setting.taskList.Add(item);
 
             //반 연상단어 2번
-            item = new Item(1, "반기문s.png");
+            item = new Item(1, "안철수s.png");
             item.choice = new string[15]{"우려 발언", "진보적 보수", "최악", "서민 친화\r\n코스프레", "미검증",
                                         "친근", "친서민", "바른정당", "친일 발언", "UN 권고 무시",
                                         "위안부 발언", "비리 의혹", "투명인간", "이명박", "UN 경력"};
             Setting.taskList.Add(item);
 
             //반 연상단어 3번
-            item = new Item(1, "반기문s.png");
+            item = new Item(1, "안철수s.png");
             item.choice = new string[15]{"가식", "무리수", "광폭행보", "연출", "글로벌한 시야",
                                         "포용적", "사드 찬성", "세월호 인양\r\n정부 방침", "박연차 게이트", "특별의전 요구",
                                         "충청", "감정적 대응", "측은지심", "기대감", "새로운 정치인"};
@@ -200,7 +200,7 @@ namespace ImplicitTest
             for (int i=0; i<15; i++)
             {
                 item = new Item(2, list1[i]);
-                item.choice = new string[2] { "문재인.png", "반기문.png" };
+                item.choice = new string[2] { "문재인.png", "안철수.png" };
                 Setting.taskList.Add(item);
             }
 
@@ -217,12 +217,12 @@ namespace ImplicitTest
             Setting.taskList.Add(item);
 
             item = new Item();
-            item.content = "반기문 후보가 어떤 덕목을 갖추면 투표하시겠습니까?\r\n가장 필요한 덕목 한 개를 클릭해 주세요.";
+            item.content = "안철수 후보가 어떤 덕목을 갖추면 투표하시겠습니까?\r\n가장 필요한 덕목 한 개를 클릭해 주세요.";
             item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
             Setting.taskList.Add(item);
 
             // 반에게 필요한 덕목
-            item = new Item(1, "반기문s.png");
+            item = new Item(1, "안철수s.png");
             item.choice = new string[15]{"깨끗한", "국민을\r\n생각하는", "소통하는", "소신있는", "도덕적인",
                                         "강력한 리더십", "정치, 행정경험", "판단력", "비전", "진실성",
                                         "책임감", "통찰력", "성실성", "추진력", "언행일치"};
@@ -252,7 +252,7 @@ namespace ImplicitTest
             for (int i = 0; i < 15; i++)
             {
                 item = new Item(2, list2[i]);
-                item.choice = new string[2] { "문재인.png", "반기문.png" };
+                item.choice = new string[2] { "문재인.png", "안철수.png" };
                 Setting.taskList.Add(item);
             }
 
@@ -269,12 +269,12 @@ namespace ImplicitTest
             Setting.taskList.Add(item);
 
             item = new Item();
-            item.content = "반기문 후보가 어떤 정책을 추진하면 투표하시겠습니까?\r\n가장 필요한 정책 한 개를 클릭해 주세요.";
+            item.content = "안철수 후보가 어떤 정책을 추진하면 투표하시겠습니까?\r\n가장 필요한 정책 한 개를 클릭해 주세요.";
             item.msg = "준비 되셨으면 [시작] 버튼을 클릭해 주세요.";
             Setting.taskList.Add(item);
 
             // 반에게 필요한 정책
-            item = new Item(1, "반기문s.png");
+            item = new Item(1, "안철수s.png");
             item.choice = new string[15]{"일자리 창출", "저출산,\r\n고령화 해소", "미세먼지,\r\n대기오염 해결", "개헌", "만18세 선거권",
                                         "재벌개혁,\r\n정경유착 근절", "사드 갈등 해결", "위안부 갈등\r\n해결", "북핵 문제 해결", "부정부패 척결",
                                         "물가 안정", "병역 개선", "주택 수급\r\n불균형 개선", "입시위주 교육개혁", "4차산업 육성"};
