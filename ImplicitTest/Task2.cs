@@ -77,7 +77,7 @@ namespace ImplicitTest
                 stimulus.SetBounds((int)Setting.cStimulus.X, (int)Setting.cStimulus.Y, (int)Setting.sStimulus.X, (int)Setting.sStimulus.Y);
             }
             this.Controls.Add(stimulus);
-            Setting.rawFile.WriteLine("제시자극:\t" + item.stimulus +
+            Setting.rawFile.WriteLine("제시자극:\t" + item.stimulus.Replace("\r\n", " ").Replace(",", " +") +
                 "\t" + (stimulus.Location.X - Setting.xBuffer) + "\t" + (stimulus.Location.Y - Setting.yBuffer) +
                 "\t" + (stimulus.Size.Width + (2 * Setting.xBuffer)) + "\t" + (stimulus.Size.Height + (2 * Setting.yBuffer)));
 
