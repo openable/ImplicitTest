@@ -79,7 +79,7 @@ namespace ImplicitTest
             this.Controls.Add(stimulus);
             Setting.rawFile.WriteLine("제시자극:\t" + item.stimulus +
                 "\t" + (stimulus.Location.X - Setting.xBuffer) + "\t" + (stimulus.Location.Y - Setting.yBuffer) +
-                "\t" + (stimulus.Location.X + stimulus.Size.Width + Setting.xBuffer) + "\t" + (stimulus.Location.Y + stimulus.Size.Height + Setting.yBuffer));
+                "\t" + (stimulus.Size.Width + (2 * Setting.xBuffer)) + "\t" + (stimulus.Size.Height + (2 * Setting.yBuffer)));
 
             Setting.rawFile.WriteLine("선택순서:");
             if (item.choice[0].Contains("s.png"))
@@ -114,8 +114,8 @@ namespace ImplicitTest
                     item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.margin.X + Setting.xInterval * 5) - Setting.xBuffer,
                     (int)Setting.cWord[0].Y - Setting.yBuffer,
-                    (int)(Setting.margin.X + Setting.xInterval * 5) + 210 + Setting.xBuffer,
-                    (int)Setting.cWord[0].Y + 280 + Setting.yBuffer);
+                    (210 + (2 * Setting.xBuffer)),
+                    (280 + (2 * Setting.yBuffer)));
             }
             else if (item.choice[0].Contains(".png"))
             {
@@ -123,8 +123,8 @@ namespace ImplicitTest
                     item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.margin.X + Setting.xInterval * 5) - Setting.xBuffer,
                     (int)Setting.cWord[0].Y - Setting.yBuffer,
-                    (int)(Setting.margin.X + Setting.xInterval * 5) + 300 + Setting.xBuffer,
-                    (int)Setting.cWord[0].Y + 400 + Setting.yBuffer);
+                    (300 + (2 * Setting.xBuffer)),
+                    (400 + (2 * Setting.yBuffer)));
             }
             else
             {
@@ -132,8 +132,8 @@ namespace ImplicitTest
                     item.choice[0].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.cWord[5].X + Setting.xInterval * 4) - Setting.xBuffer,
                     (int)Setting.cWord[5].Y,
-                    (int)(Setting.cWord[5].X + Setting.xInterval * 4) + (int)Setting.sWord.X + Setting.xBuffer,
-                    (int)Setting.cWord[5].Y + (int)(Setting.sWord.Y * 1.5) + Setting.yBuffer);
+                    ((int)Setting.sWord.X + (2 * Setting.xBuffer)),
+                    ((int)(Setting.sWord.Y * 1.5) + (2 * Setting.yBuffer)));
             }
 
             if (item.choice[1].Contains("s.png"))
@@ -168,8 +168,8 @@ namespace ImplicitTest
                     item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 210)) - Setting.xBuffer,
                     (int)Setting.cWord[4].Y - Setting.yBuffer,
-                    (int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 210)) + 210 + Setting.xBuffer,
-                    (int)Setting.cWord[4].Y + 280 + Setting.yBuffer);
+                    (210 + (2 * Setting.xBuffer)),
+                    (280 + (2 * Setting.yBuffer)));
             }
             else if (item.choice[1].Contains(".png"))
             {
@@ -177,8 +177,8 @@ namespace ImplicitTest
                     item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 300)) - Setting.xBuffer,
                     (int)Setting.cWord[4].Y - Setting.yBuffer,
-                    (int)(Setting.SCREEN_WIDTH - (Setting.margin.X + Setting.xInterval * 5 + 300)) + 300 + Setting.xBuffer,
-                    (int)Setting.cWord[4].Y + 400 + Setting.yBuffer);
+                    (300 + (2 * Setting.xBuffer)),
+                    (400 + (2 * Setting.yBuffer)));
             }
             else
             {
@@ -186,8 +186,8 @@ namespace ImplicitTest
                     item.choice[1].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)(Setting.cWord[9].X - Setting.xInterval * 4) - Setting.xBuffer,
                     (int)Setting.cWord[9].Y,
-                    (int)(Setting.cWord[9].X - Setting.xInterval * 4) + (int)Setting.sWord.X + Setting.xBuffer,
-                    (int)Setting.cWord[9].Y + (int)(Setting.sWord.Y * 1.5) + Setting.yBuffer);
+                    ((int)Setting.sWord.X + (2 * Setting.xBuffer)),
+                    ((int)(Setting.sWord.Y * 1.5) + (2 * Setting.yBuffer)));
             }
         }
 

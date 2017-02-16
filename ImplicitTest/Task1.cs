@@ -78,7 +78,7 @@ namespace ImplicitTest
             this.Controls.Add(stimulus);
             Setting.rawFile.WriteLine("제시자극:\t" + item.stimulus +
                 "\t" + (stimulus.Location.X - Setting.xBuffer) + "\t" + (stimulus.Location.Y - Setting.yBuffer) +
-                "\t" + (stimulus.Location.X + stimulus.Size.Width + Setting.xBuffer) + "\t" + (stimulus.Location.Y + stimulus.Size.Height + Setting.yBuffer));
+                "\t" + (stimulus.Size.Width + (2 * Setting.xBuffer)) + "\t" + (stimulus.Size.Height + (2 * Setting.yBuffer)));
 
             Setting.rawFile.WriteLine("선택순서:");
             for (int i = 0; i < 15; i++)
@@ -91,8 +91,8 @@ namespace ImplicitTest
                     item.choice[i].Replace("\r\n", " ").Replace(",", " +") + "\t",
                     (int)Setting.cWord[i].X - Setting.xBuffer,
                     (int)Setting.cWord[i].Y - Setting.yBuffer,
-                    (int)Setting.cWord[i].X + (int)Setting.sWord.X + Setting.xBuffer,
-                    (int)Setting.cWord[i].Y + (int)Setting.sWord.Y + Setting.yBuffer);
+                    ((int)Setting.sWord.X + (2 * Setting.xBuffer)),
+                    ((int)Setting.sWord.Y + (2 * Setting.yBuffer)));
             }
         }
 
