@@ -88,7 +88,7 @@ namespace ImplicitTest
                 words[i].Click += new System.EventHandler(this.word_Click);
                 this.Controls.Add(words[i]);
                 Setting.rawFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}",
-                    item.choice[i].Replace("\r\n", " ").Replace(",", " +") + "\t",
+                    item.choice[i].Replace("\r\n", " ").Replace(",", " +"),
                     (int)Setting.cWord[i].X - Setting.xBuffer,
                     (int)Setting.cWord[i].Y - Setting.yBuffer,
                     ((int)Setting.sWord.X + (2 * Setting.xBuffer)),
