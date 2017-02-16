@@ -278,12 +278,13 @@ namespace ImplicitTest
 
         private void word_Click(object sender, EventArgs e)
         {
+            sw.Stop();
+
             Console.WriteLine("==========================================");
             Setting.dataFile.WriteLine("==========================================");
             Console.WriteLine("문항번호\t" + current);
             Setting.dataFile.WriteLine("문항번호\t" + current);
 
-            sw.Stop();
             Console.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "\t ms");
             Setting.dataFile.WriteLine("응답시간\t" + sw.ElapsedMilliseconds.ToString() + "\t ms");
             Setting.rawFile.WriteLine("응답시간:\t" + sw.ElapsedMilliseconds.ToString());
